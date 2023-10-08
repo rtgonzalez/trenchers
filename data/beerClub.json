@@ -1,0 +1,12 @@
+{
+    "title": "Our Beer Club",
+    "text": "Join Trenchers Beer Club and start earning delicious rewards! Unlock $7.50 OFF for 75 points",
+    "buttons": [
+        {
+            "title": "Sign Up",
+            "url": "https://www.toasttab.com/trenchers/rewardsSignup",
+            "target": "_blank"
+        }
+    ],
+    "bgurl": "/assets/images/beers_drinks/trenchers_beers_bar_bw_1.webp"
+}

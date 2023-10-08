@@ -1,0 +1,18 @@
+import path from 'path';
+import { promises as fs } from 'fs';
+
+export default async function handler(req, res) {
+  try {
+    //Find the absolute path of the json directory
+    const jsonDirectory = path.join(process.cwd(), 'data');
+    //Read the json data file data.json
+    const fileContents = await fs.readFile(
+      jsonDirectory + '/websiteContent.json',
+      'utf8'
+    );
+    res.status(200).json(fileContents);
+  } catch (error) {
+    // Sends error to the client side
+    res.status(500).send('Internal Server Error.');
+  }
+}

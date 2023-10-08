@@ -1,0 +1,15 @@
+.review-wrapper {
+  width: 100%;
+  background-image: url('/assets/images/reviews/trenchers_reviews_bg.WebP');
+  height: 250px;
+  background-size: cover;
+  color: var(--color-black);
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.reviews-opinion-text {
+  padding-left: 10%;
+  padding-right: 10%;
+}

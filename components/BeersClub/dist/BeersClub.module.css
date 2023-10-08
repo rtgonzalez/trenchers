@@ -1,0 +1,54 @@
+.beer-club-wrapper {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 2rem;
+}
+.beer-club-wrapper .beer-club-info, .beer-club-wrapper .beer-club-map {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.beer-club-wrapper .beer-club-info {
+  position: relative;
+  z-index: 10;
+}
+.beer-club-wrapper .beer-club-info .beer-club-bg, .beer-club-wrapper .beer-club-info .beer-club-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.beer-club-wrapper .beer-club-info .beer-club-cover {
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.beer-club-wrapper .beer-club-info .beer-club-bg {
+  z-index: -1;
+}
+.beer-club-wrapper .beer-club-info .beer-club-bg .bg-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.button-pos {
+  margin-top: 15px;
+  color: var(--color-black);
+}
+
+@media (max-width: 768px) {
+  .beer-club-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .beer-club-wrapper .beer-club-info, .beer-club-wrapper .beer-club-map {
+    width: 100%;
+    padding: 1rem;
+  }
+}

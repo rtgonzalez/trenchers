@@ -1,0 +1,41 @@
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.menu-items {
+  font-size: 0.9375rem;
+  position: relative;
+}
+.menu-items > a {
+  text-align: left;
+  padding: 0.7rem 1rem;
+}
+.menu-items a {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.menu-items a:hover {
+  background-color: var(--color-black);
+}
+.menu-items button {
+  display: flex;
+  align-items: center;
+  font-family: var(--antonio-font);
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+}
+.menu-items button:hover {
+  background-color: var(--color-black);
+}
+.menu-items span {
+  margin-left: 3px;
+}

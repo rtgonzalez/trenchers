@@ -1,0 +1,187 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.slider a.previousButton, .slider a.nextButton {
+  font-size: 22px;
+  line-height: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+  z-index: 1;
+  padding: 10px;
+  text-decoration: none;
+  backface-visibility: hidden;
+  /* prevent jump effect when scaling */
+}
+.slider a.previousButton:not(.disabled):hover, .slider a.nextButton:not(.disabled):hover {
+  transform: translateY(-50%) scale(1.25);
+  cursor: pointer;
+}
+.slider a.previousButton svg polygon, .slider a.nextButton svg polygon {
+  fill: var(--color-golden);
+}
+.slider a.previousButton {
+  left: 20px;
+}
+.slider a.nextButton {
+  right: 20px;
+}
+
+.slider-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  background-size: cover !important;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+.slider-content .slide-image {
+  position: absolute;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: all 0.5s ease-in-out;
+}
+.slider-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+.slider-content.hidden {
+  visibility: hidden;
+}
+.slider-content.previous {
+  left: -100%;
+}
+.slider-content.current {
+  left: 0;
+}
+.slider-content.next {
+  left: 100%;
+}
+.slider-content.animateIn, .slider-content.animateOut {
+  transition: all 2s ease;
+}
+.slider-content.animateIn.previous, .slider-content.animateIn.next {
+  left: 0;
+  visibility: visible;
+}
+.slider-content.animateIn.previous p, .slider-content.animateIn.next p {
+  transition-delay: 1.1s;
+}
+.slider-content.animateIn.previous button, .slider-content.animateIn.next button {
+  transition-delay: 1.3s;
+}
+.slider-content.animateIn.previous section img, .slider-content.animateIn.next section img {
+  transition-delay: 1.3s;
+}
+.slider-content.animateIn.previous section span, .slider-content.animateIn.next section span {
+  transition-delay: 1.4s;
+}
+.slider-content.animateIn.previous section span strong, .slider-content.animateIn.next section span strong {
+  transition-delay: 1.5s;
+}
+.slider-content.animateOut.previous {
+  left: 100%;
+}
+.slider-content.animateOut.next {
+  left: -100%;
+}
+.slider-content.animateOut h1 {
+  transition-delay: 0.3s;
+}
+.slider-content.animateOut p {
+  transition-delay: 0.2s;
+}
+.slider-content.animateOut section span {
+  transition-delay: 0.1s;
+}
+.slider-content.animateOut section span strong {
+  transition-delay: 0s;
+}
+.slider-content.current h1, .slider-content.current button, .slider-content.current p, .slider-content.current section *, .slider-content.animateIn h1, .slider-content.animateIn button, .slider-content.animateIn p, .slider-content.animateIn section * {
+  transform: translateX(0);
+  transition-delay: 0.9s;
+  opacity: 1;
+}
+.slider-content .inner {
+  padding: 0 70px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.slider-content h1 {
+  font-weight: 900;
+  margin: 0 auto;
+  max-width: 840px;
+  color: var(--color-white);
+  font-size: 3rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.slider-content p {
+  color: var(--color-white);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 20px auto 30px;
+  max-width: 640px;
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.slider-content button {
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.slider-content section {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.slider-content section * {
+  transition: all 0.3s ease;
+}
+.slider-content section span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
+  line-height: 1.4;
+  vertical-align: middle;
+  margin-left: 10px;
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.slider-content section span strong {
+  color: var(--color-white);
+  font-size: 14px;
+  display: block;
+  transform: translateY(10px);
+  opacity: 0;
+}
+.slider-content section img {
+  width: 40px;
+  height: 40px;
+  border: var(--text-box-border-grey-1);
+  border-radius: 100%;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+  transform: translateX(-20px);
+  opacity: 0;
+}

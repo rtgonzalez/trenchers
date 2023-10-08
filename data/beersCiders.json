@@ -1,0 +1,27 @@
+{
+    "title": "SPECIAL BEERS & CIDERS",
+    "subtitle": "CURRENTLY AVAILABLES",
+    "beersCiders": [
+        {
+            "name": "NEW DIAMOND KNOT INDUSTRIAL WINTER ALE ON NITRO"
+        },
+        {
+            "name": "WILD RIDE NUT CRUSHER PEANUT BUTTER PORTER"
+        },
+        {
+            "name": "DRU DRU CRANBERRY SOUR ALE"
+        },
+        {
+            "name": "PELICAN SEAHOPS IPA"
+        }
+    ],
+    "buttons": [
+        {
+            "title": "BEERS & CIDERS MENU",
+            "url": "/",
+            "target": "_blank"
+        }
+    ],
+    "imageUrl": "/assets/images/place/trenchers_beers_place_2.webp",
+    "altUrl": "SPECIAL BEERS & CIDERS IMAGE"
+}

@@ -1,0 +1,21 @@
+.hero-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 110px;
+
+    & .hero-location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        min-height: 300px;
+        font-weight: 700;
+        padding: 10px;
+        align-self: center;
+        transform: translateY(-120px);
+        background: var(--color-white);
+        border-radius: 8px;
+    }
+}

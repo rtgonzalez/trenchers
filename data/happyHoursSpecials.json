@@ -1,0 +1,42 @@
+{
+    "happyHours": {
+        "title": "HAPPY HOURS",
+        "subtitle": "Happy hour is a necessity in Renton, and we've got what it takes to make this the happiest hour in town. With drink and food specials, we're sure to keep you satisfied all night long.",
+        "happyHoursList": [
+            {
+                "text": "BEERS, CIDERS AND DRINKS 5% OFF",
+                "day": "MONDAYS - Fridays",
+                "hours": "7:00 PM - 9:00 PM"
+            }
+        ],
+        "buttons": [
+            {
+                "title": "Happy Hours",
+                "url": "/",
+                "target": "_blank"
+            }
+        ],
+        "imageUrl": "/assets/images/beers_drinks/trenchers_beers_ciders_bar_co_2.webp",
+        "altUrl": "SPECIALS DRINKS, BEERS, EVENTS OR FOOD"
+    },
+    "specials": {
+        "title": "SPECIALS",
+        "subtitle": "MONDAY JULY 10TH",
+        "specialsList": [
+            {
+                "text": "BOING NIGHT MONDAY! 10% Off For Boing  Workers - ALL DAY",
+                "day": "MONDAYS",
+                "hours": "11:00 AM - 12:00 AM"
+            }
+        ],
+        "buttons": [
+            {
+                "title": "Specials",
+                "url": "/",
+                "target": "_blank"
+            }
+        ],
+        "imageUrl": "/assets/images/beers_drinks/trenchers_beers_place_3.webp",
+        "altUrl": "HAPPY HOURS DRINKS, BEERS OR FOOD"
+    }
+}

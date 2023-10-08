@@ -1,0 +1,34 @@
+{
+  "title": "REVIEWS",
+  "images": "",
+  "reviewsList": [
+    {
+      "id": 1,
+      "socialMedia": "Yelp Reviews",
+      "author": "Bailey C.",
+      "location": "Seattle, WA",
+      "opinion": "Came for Brunch and was pleasantly surprised by the unique options and huge beer menu. We ate the pork french toast and it was crazy delicious. It was a huge portion, so it was easy to split. Will absolutely be back again Parking is easy in the garage and you can walk under cover all the way to the door!"
+    },
+    {
+      "id": 2,
+      "socialMedia": "Yelp Reviews",
+      "author": "Amanda L.",
+      "location": "Los Angeles, CA",
+      "opinion": "Delicious food and great service. On top of their normal fares, they have a decent selection of gluten free items. I've ordered the burger with the gluten free bun and the flatbread and both were delicious. I'm excited to go back on one of their event nights, it looks like a fun space to listen to music or comedy."
+    },
+    {
+      "id": 3,
+      "socialMedia": "Google Reviews",
+      "author": "Christopher Walker",
+      "location": "Renton, WA",
+      "opinion": "Fun neighborhood sports bar at the Landing offering up a large selection of PNW and imported beers. Excellent selection of pub grub along with healthy alternatives. Fast and friendly service."
+    },
+    {
+      "id": 4,
+      "socialMedia": "Google Reviews",
+      "author": "Nick Johnson",
+      "location": "Renton, WA",
+      "opinion": "I got the southern fried chicken sandwich. It was great!! It was so filling with the fries. Some prices seem a little on the high side but I thought the fried chicken sandwich was a very fair deal for the amount of food. Looking forward to coming back!"
+    }
+  ]
+}

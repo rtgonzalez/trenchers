@@ -1,0 +1,21 @@
+{
+    "title": "Host Your Events with Us",
+    "text": "We welcome groups of all sizes for any style of party or event. Our covered patio area is a perfect option for your dining but we also offer full buyouts of our restaurant. Check out our customizable events menu and contact us for more information about hosting your event at TRENCHERS.",
+    "buttons": [
+        {
+            "title": "Host Your Events",
+            "url": "/reservations",
+            "target": "_self"
+        }
+    ],
+    "imagesUrl": [
+        {
+            "url": "/assets/images/place/trenchers_private_events_co_2.webp",
+            "alt": "Host Events Background Image"
+        },
+        {
+            "url": "/assets/images/place/trenchers_people_1.webp",
+            "alt": "Host Events Card Image"
+        }
+    ]
+}

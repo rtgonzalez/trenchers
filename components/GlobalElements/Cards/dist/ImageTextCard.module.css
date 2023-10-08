@@ -1,0 +1,93 @@
+.image-text-card-section {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-text-card-section .hidden {
+  display: none;
+}
+.image-text-card-section .image-bg-text-card, .image-text-card-section .image-bg-text-card-cover {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+.image-text-card-section .image-bg-text-card-cover {
+  background-color: var(--black-shadow-bg);
+}
+.image-text-card-section .image-text-card-wrapper-left, .image-text-card-section .image-text-card-wrapper-right {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.image-text-card-section .image-text-card-wrapper-right {
+  flex-direction: row-reverse;
+}
+
+.image-text-card-left {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  height: 600px;
+  border-radius: var(--border-radious-t1);
+  box-shadow: var(--grey-shadow-border);
+}
+.image-text-card-left .image {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radious-t1);
+}
+
+.image-text-card-right {
+  width: 45%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  border-radius: 8px;
+  color: var(--color-white);
+}
+.image-text-card-right h1 {
+  display: flex;
+  font-weight: lighter;
+}
+.image-text-card-right p {
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-text-card-section .image-text-card-wrapper-left, .image-text-card-section .image-text-card-wrapper-right {
+    flex-direction: column;
+  }
+  .image-text-card-section .image-text-card-wrapper-left .image-text-card-left,
+.image-text-card-section .image-text-card-wrapper-left .image-text-card-right, .image-text-card-section .image-text-card-wrapper-right .image-text-card-left,
+.image-text-card-section .image-text-card-wrapper-right .image-text-card-right {
+    width: 100%;
+  }
+}
+.image-card-box-animated {
+  animation: moveInBottom 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translatex(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0px);
+  }
+}

@@ -1,0 +1,103 @@
+{
+    "images": [
+        {
+            "group": "place",
+            "type": "Front Area",
+            "url": "/assets/images/place/trenchers_front_area_co_12.webp",
+            "alt": "Picture Trenchers Beers, Food, Sports, Entretaiments & More...",
+            "title": "Trenchers Kitchen & Tap",
+            "description": "Beers, Food, Sports, Entretaiments & More...",
+            "buttonTitle": "About Us",
+            "buttonUrl": "/aboutus",
+            "target": "_self"
+        },
+        {
+            "group": "place",
+            "type": "bar",
+            "url": "/assets/images/place/trenchers_bar_area_co_3.webp",
+            "alt": "Picture Trenchers Bar Area",
+            "title": "Bar Area",
+            "description": "Welcome to our bar area, the ultimate haven for relaxation and good times!",
+            "buttonTitle": "Check Our Menu",
+            "buttonUrl": "https://www.toasttab.com/trenchers/menu-and-pay/D10",
+            "target": "_blank"
+        },
+        {
+            "group": "place",
+            "type": "patio",
+            "url": "/assets/images/place/trenchers_front_area_co_10.webp",
+            "alt": "Picture Trenchers Indoor Patio Area",
+            "title": "Our Patio Area",
+            "description": "A great place to enjoy with family & friends",
+            "buttonTitle": "Our Place",
+            "buttonUrl": "/",
+            "target": "_self"
+        },
+        {
+            "group": "place",
+            "type": "patio",
+            "url": "/assets/images/place/trenchers_front_area_co_1.webp",
+            "alt": "Picture Trenchers Outdoor Patio Area",
+            "title": "Our Outdoor Patio",
+            "description": "Come and enjoy the sun with us",
+            "buttonTitle": "Our Place",
+            "buttonUrl": "/",
+            "target": "_self"
+        },
+        {
+            "group": "place",
+            "type": "private_events",
+            "url": "/assets/images/place/trenchers_private_events_co_2.webp",
+            "alt": "Picture Trenchers Private Events",
+            "title": "Private Events",
+            "description": "No group is too small or too large. Book your private event with us today",
+            "buttonTitle": "Our Events",
+            "buttonUrl": "/",
+            "target": "_self"
+        },
+        {
+            "group": "sports",
+            "type": "sports",
+            "url": "/assets/images/place/trenchers_sports_co_2.webp",
+            "alt": "Picture Trenchers Sports",
+            "title": "Sports",
+            "description": "Calling all sports fans!Join us for the ultimate game-watching experience",
+            "buttonTitle": "Our Sports",
+            "buttonUrl": "/",
+            "target": "_self"
+        },
+        {
+            "group": "beers_drinks",
+            "type": "beers_drinks",
+            "url": "/assets/images/beers_drinks/trenchers_beers_ciders_bar_co_2.webp",
+            "alt": "Picture Trenchers Beers & Ciders",
+            "title": "Beers & Ciders of the Week",
+            "description": "Get ready for a tantalizing lineup of flavors",
+            "buttonTitle": "Our Beers & Ciders",
+            "buttonUrl": "https://www.toasttab.com/trenchers/menu-and-pay/D10",
+            "target": "_blank"
+        },
+        {
+            "group": "place",
+            "type": "group_reservations",
+            "url": "/assets/images/place/trenchers_group_reservations_co_1.webp",
+            "alt": "Picture Trenchers Groups Reservations",
+            "title": "Group Reservations",
+            "description": "Planning a gathering with friends, family or colleagues? Look no further",
+            "buttonTitle": "Group Reservations",
+            "buttonUrl": "/",
+            "target": "_self"
+        },
+        {
+            "group": "place",
+            "type": "Entertainment",
+            "url": "/assets/images/place/trenchers_people_6.webp",
+            "alt": "Picture Trenchers Entertainment",
+            "title": "Entertainment",
+            "description": "Mark your calendars and join us for unforgettable nights of entertainment",
+            "buttonTitle": "Entertainment",
+            "buttonUrl": "/",
+            "target": "_self"
+        }
+    ]
+}

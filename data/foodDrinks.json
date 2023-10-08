@@ -1,0 +1,22 @@
+{
+    "title": "Our Food and Drinks",
+    "text": "Certanly! When it comes to our wide selection of Beer & Ciders, you can expect a diverse range of flavors and styles to satisfy your taste buds. From crisp and refreshing lagers to robust and hoppy IPAs, there is something for everyone. Now Lets talk about food, are you craving mouthwatering for american food, you're sure to find an array of options that cater to your preferences. Dont hesitate to check our amazing burgers and chicken wings!",
+    "buttons": [
+        {
+            "title": "Check Our Menu",
+            "url": "https://www.toasttab.com/trenchers/menu-and-pay/D10/",
+            "target": "_blank"
+        },
+        {
+            "title": "Call for Pickup",
+            "url": "https://order.toasttab.com/online/trenchers",
+            "target": "_blank"
+        }
+    ],
+    "image": {
+        "url": "/assets/images/foods/trenchers_classic_burger_co_1.webp",
+        "alt": "Food & Drinks Section",
+        "width": "300",
+        "height": "300"
+    }
+}

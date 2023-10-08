@@ -1,0 +1,552 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/*Globals variables*/
+:root {
+    --color-golden: #dcca87;
+    --color-orange: #e8993d;
+    --color-alabaster: #edeade;
+    --color-yellow: ##ffff00;
+    --color-black: #0c0c0c;
+    --color--dark-gray: #545454;
+    --color-crimson: #f5efdb;
+    --color-grey: #aaaaaa;
+    --color-white: #ffffff;
+    --color-wine: #722f37;
+    --color-dark-red: #8b0000;
+    --color-yelp-icon: #d32323;
+    --color-facebook-icon: #ffffff;
+    --color-red: #e60000;
+    --color-light-grey: #d3d3d3;
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --color-grey-11: rgb(239, 239, 239);
+    /* variales with effects, shadows and opacacity */
+
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+
+    /* shadows variables */
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --shadow-effect-1: 0 10px 6px -6px #777;
+    --black-shadow-bg: rgba(0, 0, 0, 0.5);
+    --white-shadow-bg: rgba(255, 255, 255, 0.5);
+    --grey-shadow-border: 10px 10px 10px grey;
+
+    /* opacacity grey and white variables */
+
+    --text-box-border-grey: 1px solid rgba(255, 255, 255, 0.1);
+    --text-box-border-grey-1: solid 2px rgba(255, 255, 255, 0.5);
+
+    /* opacacity black  variables */
+    --text-box-bg-color: rgba(0, 0, 0, 0.4);
+
+    /* widths and heights variables */
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --heights: 70vh;
+    --widths: 100%;
+    /* border-radious variables */
+
+    --border-radious-t1: 15px 50px 30px 5px;
+
+    /* font-size variables */
+    --font-2xs: 0.625rem;
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.75rem;
+    --font-4xl: 2rem;
+    --font-5xl: 2.25rem;
+    --font-6xl: 2.5rem;
+    --font-7xl: 3rem;
+    --font-8xl: 3.5rem;
+    --font-9xl: 4rem;
+    --font-10xl: 4.5rem;
+    --font-11xl: 5rem;
+    --font-12xl: 6rem;
+}
+
+/*Globals elements styles*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: var(--antonio-font);
+    font-size: 18px;
+}
+
+html,
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1.8;
+    background: linear-gradient(360deg, rgb(239, 239, 239) 0%, #ebedee 100%);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* For mobile phones: */
+[class*='col-'] {
+    width: 100%;
+}
+/*responsive classes*/
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+/* Icons color for Social Media and general elements */
+.fas-bars-icon {
+    font-size: var(--font-4xl);
+    color: var(--color-golden);
+}
+
+.fas-phone-icon {
+    font-size: var(--font-2x);
+    padding-top: 10px;
+    padding-left: 5px;
+    color: var(--color-golden);
+}
+.fab-facebook-icon {
+    padding: 0;
+    margin: 10px;
+    color: var(--color-golden);
+    background: var(--color-black);
+    border-radius: 50%;
+    font-size: var(--font-4xl);
+}
+.fab-instagram-icon {
+    padding: 3px;
+    margin: 5px;
+    color: var(--color-golden);
+    background: var(--color-black);
+    border-radius: 30%;
+    font-size: var(--font-4xl);
+}
+.fab-yelp-icon {
+    padding: 10px;
+    color: var(--color-golden);
+    font-size: var(--font-4xl);
+}
+
+.color-title,
+.black-title,
+.white-title,
+.color-subtitle,
+.black-subtitle,
+.white-subtitle,
+.color-text,
+.black-text,
+.white-text {
+    font-family: inherit;
+    text-align: center;
+}
+
+.color-title,
+.black-title,
+.white-title {
+    font-size: var(--font-2xl);
+    color: var(--color-golden);
+    font-weight: 700;
+}
+.black-title {
+    color: var(--color-black);
+}
+
+.white-title {
+    color: var(--color-white);
+}
+
+.color-subtitle,
+.black-subtitle,
+.white-subtitle {
+    font-size: var(--font-lg);
+    color: var(--color-golden);
+}
+.black-subtitle {
+    color: var(--color-black);
+}
+
+.white-subtitle {
+    color: var(--color-white);
+}
+
+.color-text,
+.black-text,
+.white-text {
+    font-size: var(--font-md);
+    color: var(--color-golden);
+}
+.black-text {
+    color: var(--color-black);
+}
+
+.white-text {
+    color: var(--color-white);
+}
+
+.bold-tex {
+    font-weight: 700;
+}
+
+/* font-size-classes */
+
+.size-2xs-text {
+    font-size: var(--font-2xs);
+}
+.size-xs-text {
+    font-size: var(--font-xs);
+}
+.size-sm-text {
+    font-size: var(--font-sm);
+}
+.size-md-text {
+    font-size: var(--font-md);
+}
+.size-lg-text {
+    font-size: var(--font-lg);
+}
+.size-xl-text {
+    font-size: var(--font-xl);
+}
+.size-2xl-text {
+    font-size: var(--font-2xl);
+}
+.size-3xl-text {
+    font-size: var(--font-3xl);
+}
+.size-4xl-text {
+    font-size: var(--font-4xl);
+}
+.size-5xl-text {
+    font-size: var(--font-5xl);
+}
+.size-6xl-text {
+    font-size: var(--font-6xl);
+}
+.size-7xl-text {
+    font-size: var(--font-7xl);
+}
+.size-8xl-text {
+    font-size: var(--font-8xl);
+}
+.size-9xl-text {
+    font-size: var(--font-9xl);
+}
+.size-10xl-text {
+    font-size: var(--font-10xl);
+}
+.size-11xl-text {
+    font-size: var(--font-11xl);
+}
+
+.size-12xl-text {
+    font-size: var(--font-12xl);
+}
+.left-align-text {
+    text-align: left;
+}
+.justify-align-text {
+    text-align: justify;
+}
+.center-align-text {
+    text-align: center;
+}
+.right-align-text {
+    text-align: right;
+}
+.padding-text {
+    padding: 10px;
+}
+
+.padding-top {
+    padding-top: 10px;
+}
+.pre-wrap-text {
+    white-space: pre-wrap;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    left: auto;
+    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+        0 4px 6px -2px rgba(71, 63, 79, 0.16);
+    font-size: 0.875rem;
+    z-index: 200;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    background-color: var(--color-black);
+    border-radius: 0.5rem;
+    display: none;
+}
+.dropdown.show {
+    display: block;
+}
+
+.golden-global-button {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 1rem;
+    width: 200px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: var(--color-golden);
+    border: none;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+/* styles for Contact component*/
+
+.contactPhone {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.contactPhoneItem p {
+    padding-left: 10px;
+}
+
+.contactButtonItem {
+    text-transform: uppercase;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    border: var(--color-white) solid;
+    color: var(--color-golden);
+    border-radius: 0.5rem;
+    font-weight: 400;
+}
+
+/* Container for groups of buttons for desktop */
+
+.btns-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for titles, subtitles and paragraph */
+
+@media only screen and (max-width: 768px) {
+    .color-title,
+    .black-title,
+    .white-title {
+        font-size: var(--font-xl);
+    }
+    .color-subtitle,
+    .black-subtitle,
+    .white-subtitle {
+        font-size: var(--font-lg);
+    }
+    .btns-group {
+        flex-direction: column;
+    }
+}
+
+.solid-black-line {
+    border-top: 5px solid var(--color-black);
+}
+
+.solid-white-line {
+    border-top: 5px solid var(--color-white);
+}
+
+.solid-color-line {
+    border-top: 5px solid var(--color-golden);
+}
+
+/* Tailwind Classes */
+/* All Tailwind Classes */
+
+/* Typography Classes */
+
+.cstm-title-size {
+    @apply md:text-2xl text-xl;
+}
+
+.cstm-subtitle-size {
+    @apply md:text-lg text-base;
+}
+.cstm-text-size {
+    @apply md:text-base text-xs;
+}
+
+.cstm-black-title {
+    @apply cstm-title-size text-crlblack py-2;
+}
+
+.cstm-black-subtitle {
+    @apply cstm-subtitle-size text-crlblack py-1;
+}
+
+.cstm-black-text {
+    @apply cstm-text-size text-crlblack py-1;
+}
+
+.cstm-white-title {
+    @apply cstm-title-size text-clrwhite py-1;
+}
+
+.cstm-white-subtitle {
+    @apply cstm-subtitle-size text-clrwhite py-1;
+}
+
+.cstm-white-menu-text {
+    @apply md:text-lg text-base text-clrwhite md:p-1 tracking-wider text-center;
+}
+
+.cstm-white-text {
+    @apply cstm-text-size text-clrwhite py-1;
+}
+
+.cstm-golden-title {
+    @apply cstm-title-size text-clrgolden;
+}
+
+.cstm-golden-subtitle {
+    @apply cstm-title-size text-clrgolden;
+}
+
+.cstm-golden-text {
+    @apply cstm-title-size text-clrgolden;
+}
+
+.cstm-gray-title {
+    @apply cstm-title-size   text-clrgray-dark py-2;
+}
+
+.cstm-gray-subtitle {
+    @apply cstm-subtitle-size text-clrgray-dark py-2;
+}
+
+.cstm-gray-text {
+    @apply cstm-text-size  text-clrgray-dark py-2;
+}
+
+.cstm-black-paragraph-spacing {
+    @apply cstm-white-text  pre-wrap-text indent-8 tracking-widest;
+}
+
+/* borders and buttons*/
+
+.cstm-border-2-golden {
+    @apply border-solid border-2 border-clrgolden;
+}
+
+.cstm-menu-btn {
+    @apply flex  border-none bg-transparent cursor-pointer w-full uppercase;
+}
+.cstm-menu-link {
+    @apply text-left p-1;
+}
+
+.cstm-menu-arrow {
+    @apply after:content-[''] align-[0.09rem] ml-[0.28rem] border-t-[0.42rem] border-x-[0.23rem] border-solid border-transparent inline-block text-clrwhite;
+}
+
+.cstm-menu-hidden {
+    @apply hidden;
+}
+
+.cstm-menu-display {
+    @apply flex md:flex-row flex-col  md:justify-between justify-center;
+}

@@ -1,0 +1,93 @@
+{
+    "title": "The best place to watch your favorites games",
+    "subtitle": "Any game. Any time",
+    "text": "If you have been looking for the best place to watch sports in Renton, then look no farther. Trenchers Kitchen & Tap boasts 13 TV's allowing different games on each TV. Don't see your game?  Just ask the bartender and we'll happily accomodate when  possible. With a plethora of cold beers on tap, Trenchers is a must for game day!  Host a watch party or join our regular team fans. If that's not enough, we offer an unbelievable menu filled with food made from scratch.",
+    "urlbg": "/assets/images/backgrounds/Seattle_Seahawks_sports_bg_1.webp",
+    "altbg": "Sports Image for Sports Section",
+    "sportsImagesList": [
+        {
+            "team": "MBL baseball Team",
+            "image": "/assets/images/sports/MLB_logo_1.webp",
+            "width": 100,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "NFL Teams",
+            "image": "/assets/images/sports/NFL_logo_1.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "MLS League",
+            "image": "/assets/images/sports/MLS_logo_2.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "Seahawks League",
+            "image": "/assets/images/sports/Seahawks_logo_1.webp",
+            "width": 80,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "Kraken Team",
+            "image": "/assets/images/sports/Seattle_Kraken_logo_1.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "NHL League ",
+            "image": "/assets/images/sports/black_NHL_Logo.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "Sounders Team",
+            "image": "/assets/images/sports/Seattle_Sounders_FC_logo_1.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "Mariners Team",
+            "image": "/assets/images/sports/Seattle_Mariners_logo_1.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "Huskey Team",
+            "image": "/assets/images/sports/Huskies_logo_1.webp",
+            "width": 80,
+            "height": 80,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "FIFA League",
+            "image": "/assets/images/sports/FIFA_logo_1.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "Seattle Storm",
+            "image": "/assets/images/sports/Seattle_Storm_logo_1.webp",
+            "width": 60,
+            "height": 60,
+            "url": "./sportsBarEvents"
+        },
+        {
+            "team": "World Rubby Cup",
+            "image": "/assets/images/sports/world_rugby_cup_white.webp",
+            "width": 90,
+            "height": 90,
+            "url": "./sportsBarEvents"
+        }
+    ]
+}
