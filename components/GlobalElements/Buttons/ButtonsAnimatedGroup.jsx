@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import styles from './GlobalBtnAnimated.module.scss';
 import { GlobalBtnAnimated } from 'components/index';

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ButtonsAnimatedGroup, LocationMap } from 'components/index';
 import styles from './BeersClub.module.scss';
 import useSWR from 'swr';
+import Error from 'pages/_error';
 
 const BeersClub = () => {
     //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format

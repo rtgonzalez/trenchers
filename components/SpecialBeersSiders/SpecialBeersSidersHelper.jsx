@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './SpecialBeersSiders.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SpecialBeersSidersHelper = ({
     title,

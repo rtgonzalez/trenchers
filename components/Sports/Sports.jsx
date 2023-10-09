@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Sports.module.scss';
-import Error from 'next/error';
+import Error from 'pages/_error';
 import useSWR from 'swr';
 
 const Sports = () => {
@@ -47,6 +47,7 @@ const Sports = () => {
                 <div className={styles.logo}>
                     <ul>
                         {sportsList.map((sport) => (
+                            // eslint-disable-next-line react/jsx-key
                             <li>
                                 <Link href={sport.url} legacyBehavior>
                                     <Image

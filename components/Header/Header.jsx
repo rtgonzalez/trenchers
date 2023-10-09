@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import useSWR from 'swr';
+import Error from 'pages/_error';
 
 function Header() {
     //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format

@@ -1,15 +1,17 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSWR from 'swr';
+import Error from 'pages/_error';
 
 const Footer = () => {
     //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
     const fetcher = (url) => fetch(url).then((res) => res.json());
     const { data, error } = useSWR('/api/location', fetcher);
     //Handle the error state
-    if (error) return <></>;
+    if (error) return <Error statusCode={error} />;
     //Handle the loading state
     if (!data) return <></>;
     //Handle the ready state and display the result contained in the data object mapped to the structure of the json file

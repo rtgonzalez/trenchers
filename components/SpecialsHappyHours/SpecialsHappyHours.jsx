@@ -1,5 +1,6 @@
 import React from 'react';
 import { RightLeftTextBgImage } from 'components/index';
+import Error from 'pages/_error';
 import useSWR from 'swr';
 const SpecialsHappyHours = () => {
     //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format

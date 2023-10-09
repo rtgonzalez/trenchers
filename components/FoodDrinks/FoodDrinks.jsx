@@ -1,6 +1,7 @@
 import { ImageTextCard } from 'components/index';
 import { formatTextSplitStr } from 'utils/jsfunctions';
 import useSWR from 'swr';
+import Error from 'pages/_error';
 
 const FoodDrinks = () => {
     //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format

@@ -13,7 +13,11 @@ const EventsCalendar = () => {
         return (
             <div>
                 <p>{eventInfo.event.title}</p>
-                <Image className="eventimage" src={eventInfo.event.url} />
+                <Image
+                    className="eventimage"
+                    src={eventInfo.event.url}
+                    alt=""
+                />
             </div>
         );
     }

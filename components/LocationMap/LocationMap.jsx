@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import useSWR from 'swr';
+import Error from 'pages/_error';
 
 function LocationMap() {
     const Map = dynamic(

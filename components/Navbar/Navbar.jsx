@@ -1,12 +1,13 @@
+/* eslint-disable react/jsx-key */
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ErrorBoundary, Menu } from 'components/index';
+import { Menu } from 'components/index';
+import Error from 'pages/_error';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSWR from 'swr';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [toggle, setToggle] = useState('cstm-menu-display');
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
@@ -14,7 +15,7 @@ const Navbar = () => {
     const fetcher = (url) => fetch(url).then((res) => res.json());
     const { data, error } = useSWR('/api/location', fetcher);
     //Handle the error state
-    if (error) return <ErrorBoundary />;
+    if (error) return <Error statusCode={error} />;
     //Handle the loading state
     if (!data) return <></>;
     //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
@@ -58,7 +59,7 @@ const Navbar = () => {
                 <div>
                     <ul className=" flex w-[15%] h-[20%] absolute top-3 md:left-[88%] left-[55%] text-center px-[15px]">
                         {socialNetworkList.map((socialNetwork) => (
-                            <li children="text-cstmgolden p-3">
+                            <li className="text-cstmgolden p-3">
                                 <Link href={socialNetwork.url}>
                                     <FontAwesomeIcon
                                         icon={[

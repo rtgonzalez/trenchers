@@ -1,11 +1,3 @@
 {
-  "extends": [
-    "plugin:react/recommended",
-
-    "airbnb",
-
-    "plugin:prettier/recommended"
-  ],
-
-  "plugins": ["react", "prettier"]
+  "extends": "next/core-web-vitals"
 }

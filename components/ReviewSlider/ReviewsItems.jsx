@@ -23,6 +23,7 @@ const ReviewsItems = ({ reviews }) => {
             >
                 <ul>
                     {reviewsList.map((review) => (
+                        // eslint-disable-next-line react/jsx-key
                         <li>
                             <SwiperSlide>
                                 <h1 className="black-title">{title}</h1>
