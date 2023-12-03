@@ -13,9 +13,9 @@ function ReviewSlider() {
     if (!data) return <></>;
     const reviews = JSON.parse(data);
     return (
-        <div>
+        <>
             <Reviews reviews={reviews} />
-        </div>
+        </>
     );
 }
 

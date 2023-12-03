@@ -1,55 +1,61 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from './ImageTextCard.module.scss';
 import { ButtonsAnimatedGroup } from 'components/index';
-import { formatParagraph } from 'utils/jsfunctions';
+import { IoBeerSharp } from 'react-icons/io5';
 
 const ImageTextCard = ({
     title,
     text,
     altText,
     imageUrl,
-    imageBgUrl,
-    bgAlt,
     btnsList,
-    imageSide
+    imageSide,
+    isJson
 }) => {
-    const imageBg = imageBgUrl ? 'image-bg-text-card' : 'hidden';
+    const dynamicClasses = imageSide
+        ? 'image-text-card-wrapper-right'
+        : 'image-text-card-wrapper-left';
 
+    const BeerList = ({ beers }) => {
+        return (
+            <ul>
+                {beers.map((beer, index) => (
+                    <li key={index}>
+                        <div className="flex justify-start items-center">
+                            <IoBeerSharp className="text-clrgolden" />
+                            <div className="pl-2 leading-10">{`${beer.name}`}</div>
+                            <br />
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        );
+    };
     return (
-        <div className={styles['image-text-card-section']}>
-            <div className={`${styles[imageSide]}`}>
-                {/* <div className={`${styles[imageBg]}`}>
-                    <Image
-                        className={styles['image-bg']}
-                        src={imageBgUrl}
-                        alt={bgAlt}
-                        fill
-                    />
-                </div>
-                <div className={styles['image-bg-text-card-cover']}></div> */}
-                <div
-                    className={`${styles['image-text-card-left']} ${styles['image-card-box-animated']}`}
-                >
-                    <Image
-                        className={styles['image']}
-                        src={imageUrl}
-                        alt={altText}
-                        fill
-                        sizes="100vw"
-                        loading="lazy"
-                    />
-                    <div className={styles['hover-over-text']}></div>
-                </div>
-                <div
-                    className={`${styles['image-text-card-right']} ${styles['image-card-box-animated']}`}
-                >
-                    <h1 className="black-title size-7xl-text left-align-text bold-text ">
+        <div
+            className={`${dynamicClasses} mb-7 justify-around items-center w-[98%]`}
+        >
+            <div className="relative overflow-hidden md:w-[45%] w-full h-[600px] shadow-lg animation-traslateX">
+                <Image
+                    className="z-[99] absolute top-0 left-0 w-full h-full object-cover rounded-lg object-center  drop-shadow-2xl contrast-150"
+                    src={imageUrl}
+                    alt={altText}
+                    fill
+                    loading="lazy"
+                />
+            </div>
+            <div className="flex flex-col justify-center pl-7 space-y-3 md:w-[45%] w-[70%] md:pb-2 pb-4">
+                <div>
+                    <h1 className="tracking-wider leading-5 md:text-5xl text-3xl font-bold  md:text-left text-center md:py-2 py-4">
                         {title}
                     </h1>
-                    <p className="black-text left-align-text pre-wrap-text">
-                        {formatParagraph(text)}
+                </div>
+                <div className="flex md:justify-start justify-center">
+                    <p className="cstm-reg-para-height-line">
+                        {isJson ? <BeerList beers={text} /> : text}
                     </p>
+                </div>
+                <div className="pt-4">
                     <ButtonsAnimatedGroup btnsList={btnsList} />
                 </div>
             </div>

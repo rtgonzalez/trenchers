@@ -1,0 +1,555 @@
+{
+    "title": "Private Events",
+    "text": "Trenchers Kitchen and Tap is your destination for private party bookings, meetings, banquets, social events, and receptions in our private dining room. Did you know that there is a new private room? . The Hangout is a sun-filled room that accommodates up to 34 people for a seated lunch or dinner. Features 4 55” Smart TV for presentations. For all inquiries, please fill out the form below and we’ll be in touch soon.",
+
+    "heroImg": {
+        "title": "Private Events",
+        "text": "Just a private place for you, friends & family",
+        "url": "/assets/images/place/trenchers_people_3.webp",
+        "alt": "Private Events"
+    },
+    "contactForm": {
+        "title": "Contact Us About Your Private Event",
+        "successMsgText": "Sent!",
+        "errorMsgText": "Something Wrong",
+        "btnTextSend": "Send a Message",
+        "btnTextSent": "Sending Message",
+        "btnCleanInputsText": "Clear Data",
+        "email": {
+            "text": "Email",
+            "placeholder": "Introduce your email",
+            "errorMsg": "Please, Introduce a valid email.",
+            "emptyMsg": "Email is empty."
+        },
+        "firstName": {
+            "text": "First Name",
+            "placeholder": " Introduce your first Name",
+            "errorMsg": "Please, Introduce 1 or more alphabetic characters.",
+            "emptyMsg": "First name is empty."
+        },
+        "lastName": {
+            "text": "Last name",
+            "placeholder": " Introduce your last name",
+            "errorMsg": "Please, Introduce 1 or more alphabetic characters.",
+            "emptyMsg": "Last name is empty."
+        },
+        "phone": {
+            "text": "Phone Number",
+            "placeholder": "Introduce your Phone Number",
+            "errorMsg": "Please, Introduce up 10 valid digits.",
+            "emptyMsg": "Phone number is empty."
+        },
+        "company": {
+            "text": "Company Name",
+            "placeholder": " Introduce your Company",
+            "errorMsg": "Please, Introduce 1 or more alphabetic characters.",
+            "emptyMsg": "Company is empty."
+        },
+        "spaceVenue": {
+            "text": "Desired Space/Venue",
+            "placeholder": "Space/Venue",
+            "emptyMsg": "Please, Select one item.",
+            "options": [
+                {
+                    "value": "Banquets, Meeting , Parties Available",
+                    "name": "Banquets, Meeting , Parties Available"
+                },
+                {
+                    "value": "Private Parties and restaurant Buyouts",
+                    "name": "Private Parties and restaurant Buyouts"
+                }
+            ]
+        },
+        "startTime": {
+            "text": "Start Time",
+            "placeholder": "Start Time",
+            "emptyMsg": "Please, Select one item.",
+            "options": [
+                {
+                    "value": "6:00",
+                    "name": "6:00 AM"
+                },
+                {
+                    "value": "6:30",
+                    "name": "6:30 AM"
+                },
+                {
+                    "value": "7:00",
+                    "name": "7:00 AM"
+                },
+                {
+                    "value": "7:30",
+                    "name": "7:30 AM"
+                },
+                {
+                    "value": "8:00",
+                    "name": "8:00 AM"
+                },
+                {
+                    "value": "8:30",
+                    "name": "8:30 AM"
+                },
+                {
+                    "value": "9:00",
+                    "name": "9:00 AM"
+                },
+                {
+                    "value": "9:30",
+                    "name": "9:30 AM"
+                },
+                {
+                    "value": "10:00",
+                    "name": "10:00 AM"
+                },
+                {
+                    "value": "10:30",
+                    "name": "10:30 AM"
+                },
+                {
+                    "value": "11:00",
+                    "name": "11:00 AM"
+                },
+                {
+                    "value": "11:30",
+                    "name": "11:30 AM"
+                },
+                {
+                    "value": "12:00",
+                    "name": "12:00 PM"
+                },
+                {
+                    "value": "12:30",
+                    "name": "12:30 PM"
+                },
+                {
+                    "value": "1:00",
+                    "name": "1:00 PM"
+                },
+                {
+                    "value": "1:30",
+                    "name": "1:30 PM"
+                },
+                {
+                    "value": "2:00",
+                    "name": "2:00 PM"
+                },
+                {
+                    "value": "2:30",
+                    "name": "2:30 PM"
+                },
+                {
+                    "value": "3:00",
+                    "name": "3:00 PM"
+                },
+                {
+                    "value": "3:30",
+                    "name": "3:30 PM"
+                },
+                {
+                    "value": "4:00",
+                    "name": "4:00 PM"
+                },
+                {
+                    "value": "4:30",
+                    "name": "4:30 PM"
+                },
+                {
+                    "value": "5:00",
+                    "name": "5:00 PM"
+                },
+                {
+                    "value": "5:30",
+                    "name": "5:30 PM"
+                },
+                {
+                    "value": "6:00",
+                    "name": "6:00 PM"
+                },
+                {
+                    "value": "6:30",
+                    "name": "6:30 PM"
+                },
+                {
+                    "value": "7:00",
+                    "name": "7:00 PM"
+                },
+                {
+                    "value": "7:30",
+                    "name": "7:30 PM"
+                },
+                {
+                    "value": "8:00",
+                    "name": "8:00 PM"
+                },
+                {
+                    "value": "8:30",
+                    "name": "8:30 PM"
+                },
+                {
+                    "value": "9:00",
+                    "name": "9:00 PM"
+                },
+                {
+                    "value": "9:30",
+                    "name": "9:30 PM"
+                },
+                {
+                    "value": "10:00",
+                    "name": "10:00 PM"
+                },
+                {
+                    "value": "10:30",
+                    "name": "10:30 PM"
+                },
+                {
+                    "value": "11:00",
+                    "name": "11:00 PM"
+                },
+                {
+                    "value": "11:30",
+                    "name": "11:30 PM"
+                },
+                {
+                    "value": "12:00",
+                    "name": "12:00 AM"
+                },
+                {
+                    "value": "12:30",
+                    "name": "12:30 AM"
+                },
+                {
+                    "value": "1:00",
+                    "name": "1:00 AM"
+                },
+                {
+                    "value": "1:30",
+                    "name": "1:30 AM"
+                },
+                {
+                    "value": "2:00",
+                    "name": "2:00 AM"
+                },
+                {
+                    "value": "2:30",
+                    "name": "2:30 AM"
+                },
+                {
+                    "value": "3:00",
+                    "name": "3:00 AM"
+                },
+                {
+                    "value": "3:30",
+                    "name": "3:30 AM"
+                },
+                {
+                    "value": "4:00",
+                    "name": "4:00 AM"
+                },
+                {
+                    "value": "4:30",
+                    "name": "4:30 AM"
+                },
+                {
+                    "value": "5:00",
+                    "name": "5:00 AM"
+                },
+                {
+                    "value": "5:30",
+                    "name": "5:30 AM"
+                }
+            ]
+        },
+        "endTime": {
+            "text": "End Time",
+            "placeholder": "End Time",
+            "emptyMsg": "Please, Select one item.",
+            "options": [
+                {
+                    "value": "6:00",
+                    "name": "6:00 AM"
+                },
+                {
+                    "value": "6:30",
+                    "name": "6:30 AM"
+                },
+                {
+                    "value": "7:00",
+                    "name": "7:00 AM"
+                },
+                {
+                    "value": "7:30",
+                    "name": "7:30 AM"
+                },
+                {
+                    "value": "8:00",
+                    "name": "8:00 AM"
+                },
+                {
+                    "value": "8:30",
+                    "name": "8:30 AM"
+                },
+                {
+                    "value": "9:00",
+                    "name": "9:00 AM"
+                },
+                {
+                    "value": "9:30",
+                    "name": "9:30 AM"
+                },
+                {
+                    "value": "10:00",
+                    "name": "10:00 AM"
+                },
+                {
+                    "value": "10:30",
+                    "name": "10:30 AM"
+                },
+                {
+                    "value": "11:00",
+                    "name": "11:00 AM"
+                },
+                {
+                    "value": "11:30",
+                    "name": "11:30 AM"
+                },
+                {
+                    "value": "12:00",
+                    "name": "12:00 PM"
+                },
+                {
+                    "value": "12:30",
+                    "name": "12:30 PM"
+                },
+                {
+                    "value": "1:00",
+                    "name": "1:00 PM"
+                },
+                {
+                    "value": "1:30",
+                    "name": "1:30 PM"
+                },
+                {
+                    "value": "2:00",
+                    "name": "2:00 PM"
+                },
+                {
+                    "value": "2:30",
+                    "name": "2:30 PM"
+                },
+                {
+                    "value": "3:00",
+                    "name": "3:00 PM"
+                },
+                {
+                    "value": "3:30",
+                    "name": "3:30 PM"
+                },
+                {
+                    "value": "4:00",
+                    "name": "4:00 PM"
+                },
+                {
+                    "value": "4:30",
+                    "name": "4:30 PM"
+                },
+                {
+                    "value": "5:00",
+                    "name": "5:00 PM"
+                },
+                {
+                    "value": "5:30",
+                    "name": "5:30 PM"
+                },
+                {
+                    "value": "6:00",
+                    "name": "6:00 PM"
+                },
+                {
+                    "value": "6:30",
+                    "name": "6:30 PM"
+                },
+                {
+                    "value": "7:00",
+                    "name": "7:00 PM"
+                },
+                {
+                    "value": "7:30",
+                    "name": "7:30 PM"
+                },
+                {
+                    "value": "8:00",
+                    "name": "8:00 PM"
+                },
+                {
+                    "value": "8:30",
+                    "name": "8:30 PM"
+                },
+                {
+                    "value": "9:00",
+                    "name": "9:00 PM"
+                },
+                {
+                    "value": "9:30",
+                    "name": "9:30 PM"
+                },
+                {
+                    "value": "10:00",
+                    "name": "10:00 PM"
+                },
+                {
+                    "value": "10:30",
+                    "name": "10:30 PM"
+                },
+                {
+                    "value": "11:00",
+                    "name": "11:00 PM"
+                },
+                {
+                    "value": "11:30",
+                    "name": "11:30 PM"
+                },
+                {
+                    "value": "12:00",
+                    "name": "12:00 AM"
+                },
+                {
+                    "value": "12:30",
+                    "name": "12:30 AM"
+                },
+                {
+                    "value": "1:00",
+                    "name": "1:00 AM"
+                },
+                {
+                    "value": "1:30",
+                    "name": "1:30 AM"
+                },
+                {
+                    "value": "2:00",
+                    "name": "2:00 AM"
+                },
+                {
+                    "value": "2:30",
+                    "name": "2:30 AM"
+                },
+                {
+                    "value": "3:00",
+                    "name": "3:00 AM"
+                },
+                {
+                    "value": "3:30",
+                    "name": "3:30 AM"
+                },
+                {
+                    "value": "4:00",
+                    "name": "4:00 AM"
+                },
+                {
+                    "value": "4:30",
+                    "name": "4:30 AM"
+                },
+                {
+                    "value": "5:00",
+                    "name": "5:00 AM"
+                },
+                {
+                    "value": "5:30",
+                    "name": "5:30 AM"
+                }
+            ]
+        },
+        "eventType": {
+            "text": "Type of Event",
+            "placeholder": "Type of Event",
+            "emptyMsg": "Please, Select one item.",
+            "options": [
+                {
+                    "value": "Alumi",
+                    "name": "Alumi"
+                },
+                {
+                    "value": "Bachelor/Bachelorette",
+                    "name": "Bachelor/Bachelorette"
+                },
+                {
+                    "value": "Birtday",
+                    "name": "Birtday"
+                },
+                {
+                    "value": "Cocktail Reception",
+                    "name": "Cocktail Reception"
+                },
+                {
+                    "value": "Corporate Lunch",
+                    "name": "Corporate Lunch"
+                },
+                {
+                    "value": "Fundraiser",
+                    "name": "Fundraiser"
+                },
+                {
+                    "value": "Graduation",
+                    "name": "Graduation"
+                },
+                {
+                    "value": "Holiday",
+                    "name": "Holiday"
+                },
+                {
+                    "value": "Meeting/Presentation",
+                    "name": "Meeting/Presentation"
+                },
+                {
+                    "value": "Photo/Film Shoot",
+                    "name": "Photo/Film Shoot"
+                },
+                {
+                    "value": "Private Dinner",
+                    "name": "Private Dinner"
+                },
+
+                {
+                    "value": "Rehearsal Dinner",
+                    "name": "Rehearsal Dinner"
+                },
+                {
+                    "value": "Shower",
+                    "name": "Shower"
+                },
+                {
+                    "value": "Sporting Event",
+                    "name": "Sporting Event"
+                },
+                {
+                    "value": "Wedding",
+                    "name": "Wedding"
+                },
+                {
+                    "value": "Others",
+                    "name": "Others"
+                }
+            ]
+        },
+        "additionalInfo": {
+            "text": "Additional Information ",
+            "placeholder": "Additional Information",
+            "errorMsg": "Please, Introduce valid aditional information.",
+            "emptyMsg": "Additional Information is empty."
+        }
+    },
+    "slidershow": {
+        "title": "Our Privates Events",
+        "items": [
+            {
+                "imgUrl": "/assets/images/place/trenchers_people_4.webp",
+                "imgAlt": "Banquets, Meeting , Parties Available",
+                "text": "Banquets, Meeting , Parties Available"
+            },
+            {
+                "imgUrl": "/assets/images/place/trenchers_people_1.webp",
+                "imgAlt": "Private Parties and restaurant Buyouts",
+                "text": "Private Parties and restaurant Buyouts"
+            }
+        ]
+    }
+}

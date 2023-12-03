@@ -1,7 +1,6 @@
 import React from 'react';
 import Error from 'pages/_error';
 import Link from 'next/link';
-import styles from './Contact.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { mergeStrings } from 'utils/jsfunctions';
 import useSWR from 'swr';
@@ -26,7 +25,7 @@ const Contact = () => {
                 />
                 <p>{contact.phone}</p>
             </div>
-            <div className={styles.contactItem}>
+            <div>
                 <Link href={contact.link.url}>{contact.link.title}</Link>
             </div>
         </div>

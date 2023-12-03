@@ -53,7 +53,7 @@
     .slide-image {
         position: absolute;
         object-fit: cover;
-        opacity: 0.7;
+        opacity: 0.8;
         transition: all 0.5s ease-in-out;
     }
     &:before {
@@ -150,93 +150,6 @@
             transform: translateX(0);
             transition-delay: 0.9s;
             opacity: 1;
-        }
-    }
-
-    & .inner {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0 70px;
-        box-sizing: border-box;
-        position: absolute;
-        width: 100%;
-        top: 40%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-
-    & h1 {
-        font-weight: 900;
-        margin: 0 auto;
-        max-width: 840px;
-        color: var(--color-white);
-        font-size: 3rem;
-        line-height: 1;
-        transition: all 0.3s ease;
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    & p {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        color: var(--color-white);
-        font-size: 1.25rem;
-        line-height: 1.5;
-        margin: 20px auto 30px;
-        max-width: 640px;
-        transition: all 0.3s ease;
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    & .button {
-        transition: all 0.3s ease;
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    & section {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-
-        & * {
-            transition: all 0.3s ease;
-        }
-
-        & span {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-            display: inline-block;
-            text-align: left;
-            line-height: 1.4;
-            vertical-align: middle;
-            margin-left: 10px;
-            transform: translateX(-10px);
-            opacity: 0;
-
-            & strong {
-                color: var(--color-white);
-                font-size: 14px;
-                display: block;
-                transform: translateY(10px);
-                opacity: 0;
-            }
-        }
-
-        & img {
-            width: 40px;
-            height: 40px;
-            border: var(--text-box-border-grey-1);
-            border-radius: 100%;
-            vertical-align: middle;
-            transition: all 0.5s ease;
-            transform: translateX(-20px);
-            opacity: 0;
         }
     }
 }

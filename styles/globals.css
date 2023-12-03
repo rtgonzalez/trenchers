@@ -192,40 +192,6 @@ a {
     }
 }
 
-/* Icons color for Social Media and general elements */
-.fas-bars-icon {
-    font-size: var(--font-4xl);
-    color: var(--color-golden);
-}
-
-.fas-phone-icon {
-    font-size: var(--font-2x);
-    padding-top: 10px;
-    padding-left: 5px;
-    color: var(--color-golden);
-}
-.fab-facebook-icon {
-    padding: 0;
-    margin: 10px;
-    color: var(--color-golden);
-    background: var(--color-black);
-    border-radius: 50%;
-    font-size: var(--font-4xl);
-}
-.fab-instagram-icon {
-    padding: 3px;
-    margin: 5px;
-    color: var(--color-golden);
-    background: var(--color-black);
-    border-radius: 30%;
-    font-size: var(--font-4xl);
-}
-.fab-yelp-icon {
-    padding: 10px;
-    color: var(--color-golden);
-    font-size: var(--font-4xl);
-}
-
 .color-title,
 .black-title,
 .white-title,
@@ -454,93 +420,171 @@ a {
     border-top: 5px solid var(--color-golden);
 }
 
-/* Tailwind Classes */
 /* All Tailwind Classes */
 
 /* Typography Classes */
 
 .cstm-title-size {
-    @apply md:text-2xl text-xl;
+    @apply text-xl md:text-2xl;
 }
 
 .cstm-subtitle-size {
-    @apply md:text-lg text-base;
+    @apply text-base md:text-lg;
 }
 .cstm-text-size {
-    @apply md:text-base text-xs;
+    @apply text-xs md:text-base;
 }
 
 .cstm-black-title {
-    @apply cstm-title-size text-crlblack py-2;
+    @apply tracking-wider py-2 cstm-title-size text-crlblack;
 }
 
 .cstm-black-subtitle {
-    @apply cstm-subtitle-size text-crlblack py-1;
+    @apply tracking-wider py-1 cstm-subtitle-size text-crlblack;
 }
 
 .cstm-black-text {
-    @apply cstm-text-size text-crlblack py-1;
+    @apply tracking-wider py-1 cstm-text-size text-crlblack;
 }
 
 .cstm-white-title {
-    @apply cstm-title-size text-clrwhite py-1;
+    @apply tracking-wider py-1 cstm-title-size text-clrwhite;
 }
 
 .cstm-white-subtitle {
-    @apply cstm-subtitle-size text-clrwhite py-1;
-}
-
-.cstm-white-menu-text {
-    @apply md:text-lg text-base text-clrwhite md:p-1 tracking-wider text-center;
+    @apply tracking-wider py-1 cstm-subtitle-size text-clrwhite;
 }
 
 .cstm-white-text {
-    @apply cstm-text-size text-clrwhite py-1;
+    @apply tracking-wider py-1 cstm-text-size text-clrwhite;
+}
+
+.cstm-menu-text {
+    @apply tracking-wider text-xs md:text-lg text-center   md:p-1 border-spacing-2;
+}
+
+.cstm-white-menu-text {
+    @apply border-white  text-clrwhite cstm-menu-text;
+}
+
+.cstm-black-menu-text {
+    @apply tracking-wider border-black text-black cstm-menu-text;
 }
 
 .cstm-golden-title {
-    @apply cstm-title-size text-clrgolden;
+    @apply tracking-wider cstm-title-size text-clrgolden;
 }
 
 .cstm-golden-subtitle {
-    @apply cstm-title-size text-clrgolden;
+    @apply tracking-wider cstm-title-size text-clrgolden;
 }
 
 .cstm-golden-text {
-    @apply cstm-title-size text-clrgolden;
+    @apply tracking-wider cstm-title-size text-clrgolden;
 }
 
 .cstm-gray-title {
-    @apply cstm-title-size   text-clrgray-dark py-2;
+    @apply tracking-wider py-2 cstm-title-size text-clrgray-dark;
 }
 
 .cstm-gray-subtitle {
-    @apply cstm-subtitle-size text-clrgray-dark py-2;
+    @apply tracking-wider py-2 cstm-subtitle-size text-clrgray-dark;
 }
 
 .cstm-gray-text {
-    @apply cstm-text-size  text-clrgray-dark py-2;
+    @apply tracking-wider py-2 cstm-text-size text-clrgray-dark;
 }
 
 .cstm-black-paragraph-spacing {
-    @apply cstm-white-text  pre-wrap-text indent-8 tracking-widest;
+    @apply tracking-widest cstm-white-text pre-wrap-text indent-8;
+}
+
+.cstm-italic-text-height-line {
+    @apply tracking-wider leading-[30px] md:text-base text-xs font-normal italic;
+}
+
+.cstm-title-height-line {
+    @apply tracking-wider leading-[30px] md:text-lg text-base font-normal;
+}
+
+.cstm-regular-text-height-line {
+    @apply tracking-wider leading-7 md:text-base text-xs font-normal;
+}
+
+.cstm-title-height-line {
+    @apply tracking-widest leading-8 md:text-xl text-lg font-bold text-left;
+}
+.cstm-reg-para-height-line {
+    @apply tracking-wider md:leading-6 leading-6 md:text-lg text-base font-bold text-left mt-3;
+}
+
+.cstm-cards-title-height-line {
+    @apply tracking-wider leading-8 md:text-3xl text-2xl font-bold;
+}
+
+.cstm-cards-subtitle-height-line {
+    @apply tracking-wider leading-8 md:text-xl text-lg font-bold;
+}
+
+.cstm-cards-reg-height-line {
+    @apply tracking-wider leading-8 md:text-lg text-base font-bold;
+}
+
+.cstm-success-message-text {
+    @apply cstm-text-size  text-clrgrey py-2;
+}
+
+.cstm-error-message-text {
+    @apply cstm-text-size text-[#EA4C41] py-2;
+}
+
+.cstm-input {
+    @apply text-sm text-clrblack font-light bg-transparent border-b py-2 pl-2 focus:outline-none focus:rounded-md focus:ring-1 ring-[#B59410];
+}
+
+.cstm-error-message {
+    @apply cstm-text-size text-[#EA4C41] pt-1;
+}
+
+.cstm-asterisk {
+    @apply cstm-text-size text-[#EA4C41] pl-2;
+}
+/* Transitions and Animations Classes  Section*/
+
+.cstm-transition {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.cstm-transition-all-200 {
+    @apply transition-all duration-200 ease-in-out;
+}
+
+/* Borders Classes Section*/
+
+.cstm-trenchers-solid-border-1 {
+    @apply border-2 rounded-lg border-solid border-[#B59410];
+}
+.cstm-trenchers-solid-border-2 {
+    @apply border-2 rounded-lg border-solid border-[#B59410];
+}
+
+/*General Forms Classes */
+
+.cstm-contact-form {
+    @apply rounded-lg flex flex-col px-8 py-8 bg-white m-1;
 }
 
 /* borders and buttons*/
 
 .cstm-border-2-golden {
-    @apply border-solid border-2 border-clrgolden;
+    @apply border-2 border-solid border-clrgolden;
 }
 
 .cstm-menu-btn {
-    @apply flex  border-none bg-transparent cursor-pointer w-full uppercase;
+    @apply flex bg-transparent border-none cursor-pointer;
 }
 .cstm-menu-link {
-    @apply text-left p-1;
-}
-
-.cstm-menu-arrow {
-    @apply after:content-[''] align-[0.09rem] ml-[0.28rem] border-t-[0.42rem] border-x-[0.23rem] border-solid border-transparent inline-block text-clrwhite;
+    @apply mt-5 mr-5 text-left;
 }
 
 .cstm-menu-hidden {
@@ -548,5 +592,128 @@ a {
 }
 
 .cstm-menu-display {
-    @apply flex md:flex-row flex-col  md:justify-between justify-center;
+    @apply flex flex-col justify-center md:flex-row md:justify-between;
+}
+
+.image-text-card-wrapper-right {
+    @apply flex md:flex-row-reverse flex-col-reverse;
+}
+
+.image-text-card-wrapper-left {
+    @apply flex md:flex-row flex-col;
+}
+
+/* Icons for Social Media */
+
+.fas-phone-icon {
+    @apply md:text-lg text-base pt-2 pl-2 text-clrgolden;
+}
+
+.fa-icon-text {
+    @apply text-clrgolden  md:text-3xl text-2xl;
+}
+
+.fas-bars-icon {
+    @apply fa-icon-text;
+}
+
+.fab-facebook-icon {
+    @apply p-0 m-2.5  bg-crlblack rounded-full fa-icon-text;
+}
+
+.fab-instagram-icon {
+    @apply p-[3px] m-[5px] bg-crlblack rounded-md fa-icon-text;
+}
+
+.fab-yelp-icon {
+    @apply p-2.5 fa-icon-text;
+}
+
+/* Animations */
+
+.animation-traslateX {
+    animation: moveInBottom 0.5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translatex(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+
+.animation-translateY {
+    animation: moveInBottom 0.5s ease-out;
+    animation-fill-mode: backwards;
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* buttons */
+.btn {
+    @apply rounded-2xl w-[200px] h-[60px] mt-[15px] mr-[15px] flex text-center items-center justify-center;
+}
+
+.btn:link,
+.btn:visited {
+    @apply uppercase inline-block rounded-lg ease-in duration-200;
+}
+
+.btn:hover {
+    @apply translate-y-[-3px] shadow-lg shadow-gray-500;
+}
+
+.btn:active {
+    @apply translate-y-[-1px] shadow-lg  shadow-gray-500;
+}
+
+.btn-golden {
+    @apply bg-clrgolden;
+}
+
+.btn-golden::after {
+    @apply bg-clrgolden;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 0.5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* container for groups of buttons for desktop and mobile */
+
+.btns-group {
+    @apply flex md:flex-row flex-col items-center;
 }

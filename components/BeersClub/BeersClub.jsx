@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { ButtonsAnimatedGroup, LocationMap } from 'components/index';
-import styles from './BeersClub.module.scss';
 import useSWR from 'swr';
 import Error from 'pages/_error';
 
@@ -17,22 +16,26 @@ const BeersClub = () => {
     const content = JSON.parse(data);
 
     return (
-        <section className={styles['beer-club-wrapper']}>
-            <div className={styles['beer-club-info']}>
-                <div className={styles['beer-club-bg']}>
+        <section className="w-full md:h-[26rem] h-[45rem] flex md:flex-row flex-col justify-center items-center mt-4 mb-2">
+            <div className="md:w-1/2 w-full h-full flex flex-col justify-center items-center relative z-10">
+                <div className="absolute top-0 left-0 w-full h-full z-[-1]">
                     <Image
-                        className={styles['bg-image']}
+                        className="object-cover"
                         src={content.bgurl}
                         fill
                         alt={content.title}
                     />
                 </div>
-                <div className={styles['beer-club-cover']}></div>
-                <h1 className="black-title">{content.title}</h1>
-                <p className="black-text">{content.text}</p>
+                <div className="absolute top-0 left-0 w-full h-full bg-clrblack opacity-40 z-[-1]"></div>
+                <h1 className="tracking-wider leading-8 md:text-4xl text-3xl text-center font-bold text-clrwhite p-4">
+                    {content.title}
+                </h1>
+                <p className="tracking-wider leading-8 md:text-lg text-base text-center font-bold text-clrwhite p-4">
+                    {content.text}
+                </p>
                 <ButtonsAnimatedGroup btnsList={content.buttons} />
             </div>
-            <div className={styles['beer-club-map']}>
+            <div className="flex flex-col justify-center items-center md:w-1/2 w-full">
                 <LocationMap />
             </div>
         </section>

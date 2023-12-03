@@ -1,5 +1,9 @@
 import { ImageTextCard } from 'components/index';
-import { formatTextSplitStr } from 'utils/jsfunctions';
+import {
+    capitalizeSentences,
+    capitalizeWords,
+    joinSentencesWithPeriodAndBreak
+} from 'utils/jsfunctions';
 import useSWR from 'swr';
 import Error from 'pages/_error';
 
@@ -18,17 +22,18 @@ const FoodDrinks = () => {
     if (!data) return <div></div>;
     //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
     const content = JSON.parse(data);
-    const text = formatTextSplitStr(content.text, '.', '.\n');
+    const capitalizeFirstWords = capitalizeSentences(content.text);
+    const formatText = joinSentencesWithPeriodAndBreak(capitalizeFirstWords);
     return (
-        <section>
+        <section className="md:mt-2 mt-8">
+            
             <ImageTextCard
-                title={content.title}
+                title={capitalizeWords(content.title)}
                 titleText={content.titleText}
-                text={text}
+                text={formatText}
                 altText={content.image.alt}
                 imageUrl={content.image.url}
                 btnsList={content.buttons}
-                imageSide="image-text-card-wrapper-left"
             />
         </section>
     );

@@ -7,7 +7,7 @@ const icon = L.icon({
 
 const Map = ({ lat, long, title, description }) => {
     return (
-        <div id="map" style={{ height: '400px', width: '100%' }}>
+        <div id="map" style={{ height: '26rem', width: '100%' }}>
             {typeof window !== 'undefined' && (
                 <MapContainer
                     center={[lat, long]}

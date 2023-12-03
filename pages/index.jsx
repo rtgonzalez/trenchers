@@ -5,15 +5,14 @@ import {
     HostEvents,
     Hero,
     Sports,
-    Header,
     ReviewSlider,
-    SpecialsHappyHours
+    SpecialsHappyHours,
+    ScrollToTopButton
 } from 'components/index';
 
 export default function Home() {
     return (
         <>
-            <Header />
             <main>
                 <Hero />
                 <FoodDrinks />
@@ -23,6 +22,7 @@ export default function Home() {
                 <Sports />
                 <ReviewSlider />
                 <BeersClub />
+                <ScrollToTopButton />
             </main>
         </>
     );

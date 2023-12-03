@@ -1,6 +1,5 @@
 import React from 'react';
 import useSWR from 'swr';
-import styles from './Slidershow.module.scss';
 import { SlideshowAnimated } from 'components/index';
 import Error from 'pages/_error';
 
@@ -15,7 +14,7 @@ const Slideshow = () => {
     const content = JSON.parse(data);
     const sliderImages = content.images;
     return (
-        <div className={styles['slidershow-wrapper']}>
+        <div>
             <SlideshowAnimated sliderImages={sliderImages} />
         </div>
     );

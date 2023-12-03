@@ -1,110 +1,66 @@
-import { useState, useEffect, useRef } from 'react';
-import Dropdown from './Dropdown';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoIosArrowDown } from 'react-icons/io';
+import { MdDeliveryDining } from 'react-icons/md';
 
-const MenuItems = ({ items, depthLevel }) => {
-    const [dropdown, setDropdown] = useState(false);
+const MenuItems = ({ items }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-    let ref = useRef();
-
-    useEffect(() => {
-        const handler = (event) => {
-            if (
-                dropdown &&
-                ref.current &&
-                !ref.current.contains(event.target)
-            ) {
-                setDropdown(false);
-            }
-        };
-        document.addEventListener('mousedown', handler);
-        document.addEventListener('touchstart', handler);
-        return () => {
-            // Cleanup the event listener
-            document.removeEventListener('mousedown', handler);
-            document.removeEventListener('touchstart', handler);
-        };
-    }, [dropdown]);
-
-    const onMouseEnter = () => {
-        window.innerWidth > 960 && setDropdown(true);
-    };
-
-    const onMouseLeave = () => {
-        window.innerWidth > 960 && setDropdown(false);
-    };
-
-    const closeDropdown = () => {
-        dropdown && setDropdown(false);
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
     };
 
     return (
-        <li
-            ref={ref}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            onClick={closeDropdown}
-        >
+        <li>
             {items.url && items.submenu ? (
-                <div>
-                    <button
-                        type="button"
-                        aria-haspopup="menu"
-                        className="cstm-menu-btn"
-                        aria-expanded={dropdown ? 'true' : 'false'}
-                        onClick={() => setDropdown((prev) => !prev)}
-                    >
-                        {window.innerWidth < 960 && depthLevel === 0 ? (
-                            items.title
-                        ) : (
-                            <Link href={items.url} legacyBehavior>
-                                <a
-                                    className="cstm-menu-link"
-                                    target={items.target}
-                                >
-                                    <p className="cstm-white-menu-text">
+                <div className="relative">
+                    <div>
+                        <Link href={items.url} legacyBehavior>
+                            <a
+                                className="flex items-center justify-center"
+                                target={items.target}
+                                onClick={toggleNavbar}
+                            >
+                                <div className="flex items-center">
+                                    <div className="cstm-white-menu-text">
                                         {items.title}
-                                    </p>
-                                </a>
-                            </Link>
-                        )}
-
-                        {depthLevel > 0 &&
-                        window.innerWidth < 960 ? null : depthLevel > 0 &&
-                          window.innerWidth > 960 ? (
-                            <span>&raquo;</span>
-                        ) : (
-                            <span className="cstm-menu-arrow" />
-                        )}
-                    </button>
-                    <Dropdown
-                        depthLevel={depthLevel}
-                        submenus={items.submenu}
-                        dropdown={dropdown}
-                    />
-                </div>
-            ) : !items.url && items.submenu ? (
-                <div>
-                    <button
-                        type="button"
-                        className="cstm-menu-btn"
-                        aria-haspopup="menu"
-                        aria-expanded={dropdown ? 'true' : 'false'}
-                        onClick={() => setDropdown((prev) => !prev)}
-                    >
-                        {items.title}{' '}
-                        {depthLevel > 0 ? (
-                            <span>&raquo;</span>
-                        ) : (
-                            <span className="cstm-menu-arrow" />
-                        )}
-                    </button>
-                    {/*  <Dropdown
-                        depthLevel={depthLevel}
-                        submenus={items.submenu}
-                        dropdown={dropdown}
-                    /> */}
+                                    </div>
+                                    <div>
+                                        <IoIosArrowDown className="ml-1" />
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
+                    </div>
+                    {isOpen && (
+                        <div className="absolute z-10 left-2 top-8 md:mt-2 mt-1 bg-clrwhite text-black font-semibold rounded">
+                            <ul className="flex flex-col">
+                                {items.submenu.map((item, index) => (
+                                    <li
+                                        className="h-8 w-40 md:pl-4 pl-10 hover:text-white hover:bg-black"
+                                        key={index}
+                                    >
+                                        <Link href={item.url} legacyBehavior>
+                                            <a
+                                                target={item.target}
+                                                className="md:text-lg text-xs font-semibold"
+                                            >
+                                                <div className="flex items-center">
+                                                    <div>
+                                                        <MdDeliveryDining />
+                                                    </div>
+                                                    <div className="pl-2">
+                                                        {item.title}
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             ) : (
                 <div>
@@ -112,14 +68,15 @@ const MenuItems = ({ items, depthLevel }) => {
                         <div>
                             <Link href={items.url} legacyBehavior>
                                 <a target={items.target}>
-                                    <Image
-                                        src={items.image.url}
-                                        alt={items.image.alt}
-                                        width={250}
-                                        height={80}
-                                        priority
-                                        className="px-2"
-                                    />
+                                    <div className="relative md:w-[200px] w-[90px] h-[80px]">
+                                        <Image
+                                            src={items.image.url}
+                                            alt={items.image.alt}
+                                            fill
+                                            priority
+                                            className="md:pb-6 pb-10 object-contain absolute top-0 left-0 h-full w-full"
+                                        />
+                                    </div>
                                 </a>
                             </Link>
                         </div>

@@ -1,0 +1,32 @@
+{
+    "title": "Send us your comments or questions!",
+    "successMsgText": "Sent!",
+    "errorMsgText": "Something Wrong",
+    "btnTextSend": "Send a Message",
+    "btnTextSent": "Sending Message",
+    "btnCleanInputsText": "Clear Data",
+    "name": {
+        "text": "Name",
+        "placeholder": " Introduce your name",
+        "errorMsg": "Please, Introduce 1 or more alphabetic characters.",
+        "emptyMsg": "Name is empty."
+    },
+    "phone": {
+        "text": "Phone Number",
+        "placeholder": "Introduce your Phone Number",
+        "errorMsg": "Please, Introduce up 10 valid digits.",
+        "emptyMsg": "Phone is empty."
+    },
+    "email": {
+        "text": "Email",
+        "placeholder": "Introduce your email",
+        "errorMsg": "Please, Introduce a valid email.",
+        "emptyMsg": "Email is empty."
+    },
+    "message": {
+        "text": "Comments / Questions",
+        "placeholder": "Comments / Questions",
+        "errorMsg": "Please, Introduce valid message.",
+        "emptyMsg": "Message is empty."
+    }
+}

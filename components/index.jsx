@@ -1,6 +1,9 @@
 export { default as SlideshowAnimated } from 'components/GlobalElements/Sliders/SlideshowAnimated';
 export { default as BeersClub } from 'components/BeersClub/BeersClub';
 export { default as Contact } from 'components/Contact/Contact';
+export { default as FooterContactForm } from 'components/GlobalElements/Forms/FooterContactForm';
+export { default as ContactForm } from 'components/GlobalElements/Forms/ContactForm';
+export { default as PrivateEventForm } from 'components/GlobalElements/Forms/PrivateEventForm';
 export { default as ErrorBoundary } from 'components/ErrorBoundary/ErrorBoundary';
 export { default as EventsCalendar } from 'components/EventsCalendar/EventsCalendar';
 export { default as FoodDrinks } from 'components/FoodDrinks/FoodDrinks';
@@ -12,6 +15,7 @@ export { default as HostEvents } from 'components/HostEvents/HostEvents';
 export { default as GlobalBtnAnimated } from 'components/GlobalElements/Buttons/GlobalBtnAnimated';
 export { default as ButtonsAnimatedGroup } from 'components/GlobalElements/Buttons/ButtonsAnimatedGroup';
 export { default as ImageTextCard } from 'components/GlobalElements/Cards/ImageTextCard';
+export { default as ImageWithCenteredText } from 'components/GlobalElements/Cards/ImageWithCenteredText';
 export { default as RightLeftTextBgImage } from 'components/GlobalElements/Cards/RightLeftTextBgImage';
 export { default as Menu } from 'components/Menu/Menu';
 export { default as Navbar } from 'components/Navbar/Navbar';
@@ -24,3 +28,7 @@ export { default as SpecialBeersSiders } from 'components/SpecialBeersSiders/Spe
 export { default as SpecialsHappyHours } from 'components/SpecialsHappyHours/SpecialsHappyHours';
 export { default as ReviewSlider } from 'components/ReviewSlider/ReviewSlider';
 export { default as Slideshow } from 'components/Slideshow/Slideshow';
+export { default as ScrollToTopButton } from 'components/ScrollToTopButton/ScrollToTopButton';
+export { default as ImagesCarousel } from 'components/ImagesCarousel/ImagesCarousel';
+export { default as SuccessAlert } from 'components/GlobalElements/Alerts/SuccessAlert';
+export { default as ErrorAlert } from 'components/GlobalElements/Alerts/ErrorAlert';

@@ -1,0 +1,32 @@
+{
+    "title": "Contact Us!",
+    "successMsgText": "Sent!",
+    "errorMsgText": "Something Wrong",
+    "btnTextSend": "Send a Message",
+    "btnTextSent": "Sending Message",
+    "btnCleanInputsText": "Clear Data",
+    "name": {
+        "text": "Name",
+        "placeholder": " Introduce your name",
+        "errorMsg": "Invalid Name.",
+        "emptyMsg": "Name is empty."
+    },
+    "phone": {
+        "text": "Phone Number",
+        "placeholder": "Phone Number",
+        "errorMsg": "Invalid Phone.",
+        "emptyMsg": "Phone is empty."
+    },
+    "email": {
+        "text": "Email",
+        "placeholder": "Introduce your email",
+        "errorMsg": "Invalid Email.",
+        "emptyMsg": "Email is empty."
+    },
+    "message": {
+        "text": "Comments / Questions",
+        "placeholder": "Comments / Questions",
+        "errorMsg": "Invalid Message.",
+        "emptyMsg": "Message is empty."
+    }
+}

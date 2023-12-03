@@ -12,6 +12,7 @@ module.exports = {
                 crlalabaster: '#edeade',
                 crlyellow: '##ffff00',
                 crlblack: '#0c0c0c',
+                
                 clrgray: {
                     dark: '#545454',
                     light: '#d3d3d3'
@@ -20,7 +21,7 @@ module.exports = {
                 clrgrey: '#aaaaaa',
                 clrwhite: '#ffffff',
                 clrwine: '#722f37',
-                crlblack: '#0c0c0c',
+                clrblack: '#0c0c0c',
                 clrred: {
                     dark: '#8b0000'
                 },

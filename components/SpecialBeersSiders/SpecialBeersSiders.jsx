@@ -1,6 +1,5 @@
 import React from 'react';
 import { ImageTextCard } from 'components/index';
-import { joinedString } from 'utils/jsfunctions';
 import useSWR from 'swr';
 import Error from 'pages/_error';
 
@@ -14,17 +13,18 @@ const SpecialBeersSiders = () => {
     if (!data) return <></>;
     //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
     const content = JSON.parse(data);
-    const textJoined = joinedString(content.beersCiders);
+
     return (
         <section>
             <ImageTextCard
                 title={content.title}
                 titleText={content.subtitle}
-                text={textJoined}
+                text={content.beersCiders}
                 altText={content.altUrl}
                 imageUrl={content.imageUrl}
                 btnsList={content.buttons}
-                imageSide="image-text-card-wrapper-right"
+                imageSide="image-right"
+                isJson="true"
             />
         </section>
     );

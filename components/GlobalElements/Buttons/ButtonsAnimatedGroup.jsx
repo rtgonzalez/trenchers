@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import styles from './GlobalBtnAnimated.module.scss';
 import { GlobalBtnAnimated } from 'components/index';
 
 const ButtonsAnimatedGroup = ({ btnsList }) => {
     return (
-        <div className={styles['btns-group']}>
+        <div className="btns-group pt-4">
             {btnsList.map((item) => (
                 <GlobalBtnAnimated
                     buttonUrl={item.url}
@@ -14,7 +13,7 @@ const ButtonsAnimatedGroup = ({ btnsList }) => {
                     btn="btn"
                     btnBg="btn-golden"
                     btnAnimated="btn-animated"
-                    btnText="white-text"
+                    btnText="cstm-black-text"
                 />
             ))}
         </div>

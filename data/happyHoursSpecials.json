@@ -5,7 +5,7 @@
         "happyHoursList": [
             {
                 "text": "BEERS, CIDERS AND DRINKS 5% OFF",
-                "day": "MONDAYS - Fridays",
+                "day": "Mondays - Fridays",
                 "hours": "7:00 PM - 9:00 PM"
             }
         ],
@@ -24,8 +24,8 @@
         "subtitle": "MONDAY JULY 10TH",
         "specialsList": [
             {
-                "text": "BOING NIGHT MONDAY! 10% Off For Boing  Workers - ALL DAY",
-                "day": "MONDAYS",
+                "text": "Boeing NIGHT MONDAY! 10% Off For Boeing  Workers - ALL DAY",
+                "day": "Mondays",
                 "hours": "11:00 AM - 12:00 AM"
             }
         ],

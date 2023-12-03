@@ -7,13 +7,6 @@ import styles from './Slidershow.module.scss';
 function Slider({ sliderImages, len }) {
     const [activeIndex, setActiveIndex] = useState(0);
 
-    // useEffect(() => {
-    //   const interval = setInterval(() => {
-    //     setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    //   }, 5000);
-    //   return () => clearInterval(interval);
-    // }, [activeIndex]);
-
     return (
         <div className={styles['slider-container']}>
             <SliderContent

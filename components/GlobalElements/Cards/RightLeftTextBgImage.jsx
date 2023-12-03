@@ -1,8 +1,7 @@
-/* eslint-disable react/jsx-key */
 import React from 'react';
 import Image from 'next/image';
-import styles from './RightLeftTextBgImage.module.scss';
 import { ButtonsAnimatedGroup } from 'components/index';
+import { capitalizeWords, capitalizeSentences } from 'utils/jsfunctions';
 
 const RightLeftTextBgImage = ({
     leftTitle,
@@ -19,72 +18,73 @@ const RightLeftTextBgImage = ({
     rightImageAlt
 }) => {
     return (
-        <div className={styles['left-right-text-section']}>
-            <div
-                className={`${styles['left-right-text-wrapper']} ${styles['image-card-box-animated']}`}
-            >
-                <div className={styles['bg-image-wrapper']}>
+        <div className="md:w-full w-[99%] md:h-[25rem] flex md:flex-row flex-col">
+            <div className="w-full h-full flex flex-col justify-center items-center animation-traslateX relative z-[10]">
+                <div className="absolute top-0 left-0 w-full h-full z-[-1]">
                     <Image
-                        className={styles['bg-image']}
+                        className="w-full h-full object-cover object-bottom"
                         src={leftImageUrl}
                         fill
                         alt={leftImageAlt}
                     />
                 </div>
-                <div className={styles['image-shadow-black']}></div>
-                <h1 className="white-title size-7xl-text center-align-text bold-text">
-                    {leftTitle}
+
+                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50 p-4 z-[-1]"></div>
+                <h1 className="tracking-wider leading-8 md:text-5xl text-3xl font-bold text-clrblack pb-4 md:pt-1 pt-4">
+                    {capitalizeWords(leftTitle)}
                 </h1>
-                <h2 className="white-subtitle center-align-text pre-wrap-text padding-text">
+                <h2 className="cstm-cards-subtitle-height-line text-clrblack pb-4">
                     {leftSubtitle}
                 </h2>
                 <ul>
-                    {leftTextlist.map((item) => (
-                        <li>
+                    {leftTextlist.map((item, index) => (
+                        <li key={index}>
                             <hr className="solid-color-line" />
-                            <p className="white-text center-align-text pre-wrap-text padding-text">
+                            <p className="tracking-wider leading-8 md:text-lg text-base text-center font-bold text-clrblack pb-2 pt-6">
                                 {item.text}
                             </p>
-                            <p className="white-text center-align-text pre-wrap-text">
-                                {item.day} ~ {item.hours}
+                            <p className="tracking-wider leading-8 md:text-lg text-base text-center font-bold text-clrblack pb-2">
+                                {`${item.day} ~ ${item.hours}`}
                             </p>
                         </li>
                     ))}
                 </ul>
-                <ButtonsAnimatedGroup btnsList={leftBtnsList} />
+                <div className="pb-6">
+                    <ButtonsAnimatedGroup btnsList={leftBtnsList} />
+                </div>
             </div>
-            <div
-                className={`${styles['left-right-text-wrapper']} ${styles['image-card-box-animated']} ${styles['margin-top']}`}
-            >
-                <div className={styles['bg-image-wrapper']}>
+            <div className="w-full h-full flex flex-col justify-center items-center animation-traslateX relative z-[10]">
+                <div className="absolute top-0 left-0 w-full h-full z-[-1]">
                     <Image
-                        className={styles['bg-image']}
+                        className="w-full h-full object-cover object-bottom"
                         src={rightImageUrl}
                         fill
                         alt={rightImageAlt}
                     />
                 </div>
-                <div className={styles['image-shadow-black']}></div>
-                <h1 className="white-title size-7xl-text center-align-text bold-text">
-                    {rightTitle}
+                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50 p-4 z-[-1]"></div>
+                <h1 className="tracking-wider leading-8 md:text-5xl text-3xl font-bold text-clrblack pb-4 md:pt-1 pt-6">
+                    {capitalizeWords(rightTitle)}
                 </h1>
-                <h2 className="white-subtitle center-align-text pre-wrap-text padding-text pre-wrap-text">
-                    {rightSubtitle}
+                <h2 className="tracking-wider leading-8 md:text-base text-xs text-center font-bold text-clrblack pb-4">
+                    {capitalizeSentences(rightSubtitle)}
                 </h2>
                 <ul>
-                    {rightTextlist.map((item) => (
-                        <li>
+                    {rightTextlist.map((item, index) => (
+                        <li key={index}>
                             <hr className="solid-color-line" />
-                            <p className="white-text center-align-text padding-top pre-wrap-text">
+                            <p className="tracking-wider leading-8 md:text-lg text-base text-center font-bold text-clrblack pb-2 pt-4">
                                 {item.text}
                             </p>
-                            <p className="white-text center-align-text">
-                                {item.day} ~ {item.hours}
+                            <p className="tracking-wider leading-8 md:text-lg text-base text-center font-bold text-clrblack pb-2">
+                                {`${item.day} ~ ${item.hours}`}
                             </p>
                         </li>
                     ))}
                 </ul>
-                <ButtonsAnimatedGroup btnsList={rightBtnsList} />
+                <div className="pb-6">
+                    <ButtonsAnimatedGroup btnsList={rightBtnsList} />
+                </div>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { GrLocation } from 'react-icons/gr';
 import { ButtonsAnimatedGroup } from 'components/index';
-import styles from './Location.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSWR from 'swr';
 import Error from 'pages/_error';
 
@@ -25,19 +25,33 @@ const Location = () => {
         location.postalCode
     ]);
     return (
-        <section className={styles['location-wrapper']}>
-            <div className={styles['location-address']}>
-                <h1 className="black-title bold-text size-4xl-text">
+        <section className="flex items-center justify-center md:mb-2 mb-2">
+            <div className="flex flex-col justify-between items-center space-x-2">
+                <h1 className="cstm-cards-title-height-line text-clrblack">
                     {welcomeSection.title}
                 </h1>
-                <p className="black-subtitle bold-text">
-                    <GrLocation className={styles['location-icon']} />
-                    {address}
-                </p>
-                <h2 className="black-subtitle bold-text">
+                <div className="flex space-x-3 pt-4">
+                    <GrLocation className="text-3xl animation-translateY" />
+                    <p className="cstm-cards-reg-height-line text-clrblack">
+                        {address}
+                    </p>
+                </div>
+
+                <h2 className="cstm-cards-subtitle-height-line text-clrblack">
                     {location.contact.title}
                 </h2>
-                <p className="black-subtitle">{location.contact.phone}</p>
+
+                <div className=" flex justify-center items-center space-x-2 pt-2">
+                    <div>
+                        <FontAwesomeIcon
+                            icon={['fas', 'phone']}
+                            className="fas-phone-icon"
+                        />
+                    </div>
+                    <p className="cstm-cards-reg-height-line text-clrblack">
+                        {location.contact.phone}
+                    </p>
+                </div>
                 <ButtonsAnimatedGroup btnsList={location.contact.buttons} />
             </div>
         </section>

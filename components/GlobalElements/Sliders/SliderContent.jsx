@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { mergeStrings } from 'utils/jsfunctions';
-import { GlobalBtnAnimated } from 'components/index';
 import styles from './Slidershow.module.scss';
 function SliderContent({ activeIndex, sliderImages }) {
     return (

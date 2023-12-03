@@ -1,17 +1,13 @@
 import React from 'react';
 import { Slideshow, Location } from 'components/index';
-import styles from './Hero.module.scss';
 
-
-//Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
-const fetcher = (url) => fetch(url).then((res) => res.json());
 const Hero = () => {
     return (
-        <div className={styles['hero-wrapper']}>
-            <div className={styles['hero-slidershow']}>
+        <div className="w-full flex flex-col justify-center mt-[6.8rem]">
+            <div>
                 <Slideshow />
             </div>
-            <div className={styles['hero-location']}>
+            <div className="flex items-center justify-center w-[37rem] p-[10px] font-bold min-h-[300px] bg-clrwhite rounded-lg self-center md:translate-y-[-5.5rem] translate-y-[-2.5rem]">
                 <Location />
             </div>
         </div>

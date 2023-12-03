@@ -9,10 +9,6 @@ export function formatTextSplitStr(text, splitStr, joinStr) {
     const formattedText = lines.join(joinStr);
     return formattedText;
 }
-export function joinedString(json) {
-    const formattedText = json.map((item) => `${item.name}`).join('\n');
-    return formattedText;
-}
 
 function capitalizeSentence(sentence) {
     // Trim leading and trailing whitespace, then capitalize the first letter
@@ -54,4 +50,56 @@ export function formatParagraphExcept(paragraph, exceptions) {
         formatSentenceExcept(sentence, exceptions)
     );
     return formattedSentences.join('. ');
+}
+
+export const capitalizeSentences = (paragraph) => {
+    const sentences = paragraph.split(/\.\s+/);
+    const capitalizedSentences = sentences.map((sentence) => {
+        return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    });
+    return capitalizedSentences.join('. ');
+};
+
+export const capitalizeWords = (str) => {
+    const prepositions = [
+        'of',
+        'the',
+        'and',
+        'in',
+        'on',
+        'at',
+        'for',
+        'with',
+        'as',
+        '&',
+        'Trenchers',
+        'to'
+    ];
+    const words = str.toLowerCase().split(' ');
+
+    for (let i = 0; i < words.length; i++) {
+        if (i === 0 || !prepositions.includes(words[i])) {
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        }
+    }
+
+    return words.join(' ');
+};
+
+export const joinSentencesWithCommaAndBreak = (sentences) => {
+    const joinedString = sentences.join(',<br>');
+    return <div dangerouslySetInnerHTML={{ __html: joinedString }} />;
+};
+
+export const joinSentencesWithPeriodAndBreak = (sentences) => {
+    const sentencesArray = sentences.split(/\.\s+/);
+    const joinedString = sentencesArray.join('.<br><br>');
+    return <div dangerouslySetInnerHTML={{ __html: joinedString }} />;
+};
+
+export function joinedStringWithBreakLine(json) {
+    const joinedText = json
+        .map((item) => `${capitalizeWords(item.name)}`)
+        .join(' <br>');
+    return <div dangerouslySetInnerHTML={{ __html: joinedText }} />;
 }

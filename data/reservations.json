@@ -1,0 +1,90 @@
+{
+    "title": "Reservations & Contact",
+    "text1": "Please use the link below to make a reservation for up to 19 people. If you'd like a reservation for today please call us at (425) 255-0714 to make a reservation. Remember to let us know if there are minors in your party.",
+    "linkSec": {
+        "text1": "For Private Events or big groups go to the ",
+        "link": {
+            "title": "Private Events",
+            "url": "/PrivateEvents",
+            "target": "_self"
+        },
+        "text2": "section."
+    },
+    "text2": "We look forward to hearing from you.!",
+    "buttons": [
+        {
+            "title": "Book Here",
+            "url": "https://tables.toasttab.com/restaurants/21565bf6-8bf3-4d82-a732-1646e957b9a4/findTime",
+            "target": "_blank"
+        }
+    ],
+    "heroImg": {
+        "title": "Visit Us",
+        "text": "We are Open",
+        "url": "/assets/images/beers_drinks/trenchers_beers_bar_co_10.webp",
+        "alt": "Reservations Section"
+    },
+    "contactForm": {
+        "title": "Send us your comments or questions!",
+        "successMsgText": "Sent!",
+        "errorMsgText": "Something Wrong",
+        "btnTextSend": "Send a Message",
+        "btnTextSent": "Sending Message",
+        "btnCleanInputsText": "Clear Data",
+        "name": {
+            "text": "Name",
+            "placeholder": " Introduce your name",
+            "errorMsg": "Please, Introduce 1 or more alphabetic characters.",
+            "emptyMsg": "Name is empty."
+        },
+        "phone": {
+            "text": "Phone Number",
+            "placeholder": "Introduce your Phone Number",
+            "errorMsg": "Please, Introduce up 10 valid digits.",
+            "emptyMsg": "Phone is empty."
+        },
+        "email": {
+            "text": "Email",
+            "placeholder": "Introduce your email",
+            "errorMsg": "Please, Introduce a valid email.",
+            "emptyMsg": "Email is empty."
+        },
+        "message": {
+            "text": "Comments / Questions",
+            "placeholder": "Comments / Questions",
+            "errorMsg": "Please, Introduce valid message.",
+            "emptyMsg": "Message is empty."
+        }
+    },
+    "slidershow": {
+        "title": "Our Delights",
+        "items": [
+            {
+                "imgUrl": "/assets/images/beers_drinks/trenchers_beers_bar_co_4.webp",
+                "imgAlt": "Our Specials Plates & Drinks Carousel",
+                "text": "Specials Beers"
+            },
+            {
+                "imgUrl": "/assets/images/food/trenchers_burger_1.webp",
+                "imgAlt": "Our Specials Plates & Drinks Carousel",
+                "text": " French Fries & Classic Burger"
+            },
+            {
+                "imgUrl": "/assets/images/food/trenchers_supreme_omelet_co_1.webp",
+                "imgAlt": "Our Specials Plates & Drinks Carousel",
+                "text": "Supreme Omelette"
+            },
+
+            {
+                "imgUrl": "/assets/images/food/trenchers_sandwich_beef_potatoes_co_1",
+                "imgAlt": "Our Specials Plates & Drinks Carousel",
+                "text": "Sandwich beef Potatoes"
+            },
+            {
+                "imgUrl": "/assets/images/food/trenchers_french_toast co_1.webp",
+                "imgAlt": "Our Specials Plates & Drinks Carousel",
+                "text": "French Toast"
+            }
+        ]
+    }
+}

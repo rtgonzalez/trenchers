@@ -1,17 +1,15 @@
 import React from 'react';
-import styles from './Location.module.scss';
 
 const WorkingHours = ({ openDaysHours }) => {
     return (
-        <div className={styles['location-working-hours']}>
+        <div>
             <ul>
                 <li>
                     <h1>{openDaysHours.title}</h1>
                 </li>
-                {openDaysHours.daysHours.map((openDayHour) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <li>
-                        <p className={'black-text bold-text'}>
+                {openDaysHours.daysHours.map((openDayHour, index) => (
+                    <li key={index}>
+                        <p>
                             {openDayHour.dayOfWeek}:{openDayHour.opens} -{' '}
                             {openDayHour.closes}
                         </p>
