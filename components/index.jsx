@@ -6,6 +6,8 @@ export { default as ContactForm } from 'components/GlobalElements/Forms/ContactF
 export { default as PrivateEventForm } from 'components/GlobalElements/Forms/PrivateEventForm';
 export { default as ErrorBoundary } from 'components/ErrorBoundary/ErrorBoundary';
 export { default as EventsCalendar } from 'components/EventsCalendar/EventsCalendar';
+export { default as EventsBigCalendar } from 'components/EventsCalendar/EventsBigCalendar';
+export { default as EventList } from 'components/EventsCalendar/EventList';
 export { default as FoodDrinks } from 'components/FoodDrinks/FoodDrinks';
 export { default as Footer } from 'components/Footer/Footer';
 export { default as Features } from 'components/Features/Features';
