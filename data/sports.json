@@ -84,9 +84,9 @@
         },
         {
             "team": "World Rugby Cup",
-            "image": "/assets/images/sports/world_rugby_cup_white.webp",
-            "width": 90,
-            "height": 90,
+            "image": "/assets/images/sports/Major_League_Rugby.webp",
+            "width": 60,
+            "height": 60,
             "url": "./sportsBarEvents"
         }
     ]

@@ -1,4 +1,7 @@
+/*******************Strings******************/
+
 // merge all strings of an arrarr split by blank
+import { format } from 'date-fns';
 
 export function mergeStrings(arr) {
     arr.map((str) => `${str}`).join(' ');
@@ -93,8 +96,13 @@ export const joinSentencesWithCommaAndBreak = (sentences) => {
 
 export const joinSentencesWithPeriodAndBreak = (sentences) => {
     const sentencesArray = sentences.split(/\.\s+/);
-    const joinedString = sentencesArray.join('.<br><br>');
-    return <div dangerouslySetInnerHTML={{ __html: joinedString }} />;
+    const joinedString = sentencesArray.join('.<br>');
+    return (
+        <p
+            className="cstm-par-text"
+            dangerouslySetInnerHTML={{ __html: joinedString }}
+        />
+    );
 };
 
 export function joinedStringWithBreakLine(json) {
@@ -103,3 +111,59 @@ export function joinedStringWithBreakLine(json) {
         .join(' <br>');
     return <div dangerouslySetInnerHTML={{ __html: joinedText }} />;
 }
+
+export function splitAndCleanText(text) {
+    // Split the text into sentences based on '\n'
+    const sentences = text.split('\n');
+
+    // Remove all '\n' from each sentence
+    const cleanedSentences = sentences.map((sentence) =>
+        sentence.replace(/\n/g, '')
+    );
+
+    return cleanedSentences;
+}
+
+export const filterByMonthAndYear = (data, year, month) => {
+    return data.filter((item) => {
+        const itemDate = new Date(item.date);
+        return (
+            itemDate.getFullYear() === year && itemDate.getMonth() === month - 1
+        );
+    });
+};
+/******************dates and times********************/
+
+export const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+export function convertTo24Hour(time) {
+    if (time) {
+        const [hours, minutes] = time.split(':');
+        const period = hours >= 12 ? 'PM' : 'AM';
+        const convertedHours =
+            period === 'PM' && hours < 12 ? parseInt(hours, 10) + 12 : hours;
+        return `${convertedHours}:${minutes}`;
+    } else return '';
+}
+
+export function convertAMPMHours(time24) {
+    if (time24) {
+        const [hours, minutes] = time24.split(':');
+        const hoursIn12HourFormat = hours % 12 || 12;
+        const amOrPm = hours >= 12 ? 'PM' : 'AM';
+        return `${hoursIn12HourFormat}:${minutes} ${amOrPm}`;
+    } else return '';
+}
+
+export const diffWeeksDays = (currentDate) => {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+
+    // Getting the last day of the current month
+    const lastDayOfMonth = new Date(year, month + 1, 0);
+
+    // Getting the day of the week for the last day of the month
+    const dayOfWeek = lastDayOfMonth.getDay();
+
+    return 6 - dayOfWeek;
+};

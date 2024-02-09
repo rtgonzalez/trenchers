@@ -1,7 +1,8 @@
+import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
-function ErrorAlert({ message }) {
+function ErrorAlert({ message, dynamicClass }) {
     const [isOpen, setIsOpen] = useState(true);
 
     const handleClose = () => {
@@ -20,7 +21,7 @@ function ErrorAlert({ message }) {
                             />
                         </div>
                         <div className="ml-2">
-                            <p className="dm-text-size">{message}</p>
+                            <p className={`${dynamicClass}`}>{message}</p>
                         </div>
                         <div className="absolute top-0 bottom-0 right-0 p-1">
                             <button

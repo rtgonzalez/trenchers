@@ -1,6 +1,6 @@
 import React from 'react';
 import { GrLocation } from 'react-icons/gr';
-import { ButtonsAnimatedGroup } from 'components/index';
+import { GlobalBtnAnimated } from 'components/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSWR from 'swr';
 import Error from 'pages/_error';
@@ -25,7 +25,7 @@ const Location = () => {
         location.postalCode
     ]);
     return (
-        <section className="flex items-center justify-center md:mb-2 mb-2">
+        <div className="flex items-center justify-center md:mb-2 mb-2">
             <div className="flex flex-col justify-between items-center space-x-2">
                 <h1 className="cstm-cards-title-height-line text-clrblack">
                     {welcomeSection.title}
@@ -41,7 +41,10 @@ const Location = () => {
                     {location.contact.title}
                 </h2>
 
-                <div className=" flex justify-center items-center space-x-2 pt-2">
+                <div
+                    div
+                    className=" flex justify-center items-center space-x-2 pt-2"
+                >
                     <div>
                         <FontAwesomeIcon
                             icon={['fas', 'phone']}
@@ -52,10 +55,19 @@ const Location = () => {
                         {location.contact.phone}
                     </p>
                 </div>
-                <ButtonsAnimatedGroup btnsList={location.contact.buttons} />
+                <div className="flex justify-center items-center pl-10">
+                    <GlobalBtnAnimated
+                        buttonUrl={location.contact.buttons[0].url}
+                        urlText={location.contact.buttons[0].title}
+                        target={location.contact.buttons[0].target}
+                        btn="rounded-btn"
+                        btnBg="btn-golden"
+                        btnAnimated="btn-animated"
+                        btnText="cstm-black-text"
+                    />
+                </div>
             </div>
-        </section>
+        </div>
     );
 };
-
 export default Location;

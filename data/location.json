@@ -17,22 +17,22 @@
             "buttons": [
                 {
                     "title": "Get Directions",
-                    "url": "#section-map",
+                    "url": "#map",
                     "target": ""
                 },
                 {
                     "title": "Make Reservations",
-                    "url": "/reservations",
+                    "url": "/smallGroups",
                     "target": "_self",
                     "submenu": [
                         {
                             "title": "Small Groups",
-                            "url": "/Reservations",
+                            "url": "/smallGroups",
                             "target": "_self"
                         },
                         {
                             "title": "Private Events",
-                            "url": "/PrivateEvents",
+                            "url": "/privateEvents",
                             "target": "_self"
                         }
                     ]
@@ -108,5 +108,37 @@
                 "closes": "12:00am"
             }
         ]
+    },
+    "contactForm": {
+        "title": "Contact Us!",
+        "successMsgText": "Sent!",
+        "errorMsgText": "Something Wrong",
+        "btnTextSend": "Send a Message",
+        "btnTextSent": "Sending Message",
+        "btnCleanInputsText": "Clear Data",
+        "name": {
+            "text": "Name",
+            "placeholder": " Introduce your name",
+            "errorMsg": "Invalid Name.",
+            "emptyMsg": "Name is empty."
+        },
+        "phone": {
+            "text": "Phone Number",
+            "placeholder": "Phone Number",
+            "errorMsg": "Invalid Phone.",
+            "emptyMsg": "Phone is empty."
+        },
+        "email": {
+            "text": "Email",
+            "placeholder": "Introduce your email",
+            "errorMsg": "Invalid Email.",
+            "emptyMsg": "Email is empty."
+        },
+        "message": {
+            "text": "Comments / Questions",
+            "placeholder": "Comments / Questions",
+            "errorMsg": "Invalid Message.",
+            "emptyMsg": "Message is empty."
+        }
     }
 }

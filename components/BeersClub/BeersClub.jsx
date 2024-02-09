@@ -16,7 +16,7 @@ const BeersClub = () => {
     const content = JSON.parse(data);
 
     return (
-        <section className="w-full md:h-[26rem] h-[45rem] flex md:flex-row flex-col justify-center items-center mt-4 mb-2">
+        <section className="w-full md:h-[26rem] h-[45rem] flex md:flex-row flex-col justify-center items-center my-6">
             <div className="md:w-1/2 w-full h-full flex flex-col justify-center items-center relative z-10">
                 <div className="absolute top-0 left-0 w-full h-full z-[-1]">
                     <Image

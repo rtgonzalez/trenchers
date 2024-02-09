@@ -11,23 +11,23 @@ function SlideshowAnimated({ sliderImages }) {
                 {sliderImages.map((slide, index) => (
                     <div key={index} className={styles['slider-content']}>
                         <Image
-                            className="absolute object-cover opacity-80 transition duration-500 ease-in-out  hover:backdrop-brightness-150 object-center"
+                            className="absolute object-cover opacity-80 transition duration-500 ease-in-out  hover:backdrop-brightness-150 "
                             fill
                             src={slide.url}
                             alt={slide.description}
                         />
-                        <div className="backdrop-blur-md flex flex-col items-center justify-center px-0 py-[70px] box-border absolute md:w-[40%] w-[70%] h-[70%] md:left-[30%] left-[15%] md:top-[5%] top-[10%] space-y-4">
-                            <h1 className="tracking-wider leading-8 md:text-4xl text-3xl font-bold text-clrwhite">
+                        <div className="flex flex-col items-center justify-center bg-black opacity-80 px-0 py-[70px] box-border absolute md:w-[40%] w-[70%] h-[70%] md:left-[30%] left-[15%] md:top-[5%] top-[10%] space-y-4">
+                            <h1 className="tracking-wider leading-8 md:text-4xl text-3xl font-bold text-white">
                                 {slide.title}
                             </h1>
-                            <p className="cstm-cards-subtitle-height-line text-clrwhite">
+                            <p className="cstm-cards-subtitle-height-line cstm-white-text w-[90%]">
                                 {slide.description}
                             </p>
                             <GlobalBtnAnimated
                                 buttonUrl={slide.buttonUrl}
                                 urlText={slide.buttonTitle}
                                 target={slide.target}
-                                btn="btn"
+                                btn="rounded-btn"
                                 btnBg="btn-golden"
                                 btnAnimated="btn-animated"
                                 btnText="cstm-black-text"

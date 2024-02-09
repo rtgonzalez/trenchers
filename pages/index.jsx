@@ -3,7 +3,7 @@ import {
     FoodDrinks,
     SpecialBeersSiders,
     HostEvents,
-    Hero,
+    HomeHero,
     Sports,
     ReviewSlider,
     SpecialsHappyHours,
@@ -12,18 +12,16 @@ import {
 
 export default function Home() {
     return (
-        <>
-            <main>
-                <Hero />
-                <FoodDrinks />
-                <SpecialBeersSiders />
-                <HostEvents />
-                <SpecialsHappyHours />
-                <Sports />
-                <ReviewSlider />
-                <BeersClub />
-                <ScrollToTopButton />
-            </main>
-        </>
+        <main>
+            <HomeHero />
+            <FoodDrinks />
+            <SpecialBeersSiders />
+            <HostEvents />
+            <SpecialsHappyHours />
+            <Sports />
+            <ReviewSlider />
+            <BeersClub />
+            <ScrollToTopButton />
+        </main>
     );
 }

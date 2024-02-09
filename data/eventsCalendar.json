@@ -1,0 +1,39 @@
+{
+    "title": "EventS Calendar per Month",
+    "buttons": [
+        {
+            "title": "Calendar",
+            "Calendar": "",
+            "url": "/",
+            "target": "_blank"
+        },
+         {
+             "title": "Events",
+             "Calendar": "",
+             "url": "/",
+             "target": "_blank"
+         }
+    ],
+    "eventsList": [
+        {
+            "id": 1,
+            "date": "2023-01-20",
+            "showStart": "6pm",
+            "showEnd": "Until closing",
+            "title": " Seawallpodcast",
+            "description": "Join #Seawallpodcast and us at Trenchers on January 20th at 6 pm for the ultimate Seawolves rugby Fans Preseason Party! Get ready to unleash your support with spirited cheers, chants, and songs",
+            "minAge": "21+",
+            "image": "/assets/images/events/trenchers_event_012024_1.jpg"
+        },
+        {
+            "id": 2,
+            "date": "2023-01-08",
+            "showStart": "4:30pm",
+            "showEnd": "Until closing",
+            "title": "The College Football Playoff",
+            "description": "Join us to root for the Huskies as they take on the Mitchigan Wolverines next Monday, January 8th at 4:30pm!",
+            "minAge": "All Ages",
+            "image": "/assets/images/events/trenchers_event_010824_2.jpg"
+        }
+    ]
+}

@@ -2,7 +2,7 @@
     "menuItems": [
         {
             "title": "About us",
-            "url": "/AboutUs",
+            "url": "/aboutUs",
             "target": "_self"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "title": "Sports & Events",
-            "url": "/SportsBarEvents",
+            "url": "/sportsBarEvents",
             "target": "_self"
         },
         {
@@ -20,7 +20,7 @@
             "url": "/",
             "target": "_self",
             "image": {
-                "url": "/assets/images/logos/trenchers_logo_v3.WebP",
+                "url": "/assets/images/logos/trenchers_logo_v3.webp",
                 "alt": "Logo de Trenchers Kitchen & Sports"
             }
         },

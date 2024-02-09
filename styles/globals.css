@@ -1,7 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
 /*Globals variables*/
+
 :root {
     --color-golden: #dcca87;
     --color-orange: #e8993d;
@@ -18,6 +20,7 @@
     --color-facebook-icon: #ffffff;
     --color-red: #e60000;
     --color-light-grey: #d3d3d3;
+
     /* grey used for paragraphs */
     --clr-grey-5: hsl(210, 22%, 49%);
     --clr-grey-6: hsl(209, 23%, 60%);
@@ -26,6 +29,7 @@
     --clr-grey-9: hsl(212, 33%, 89%);
     --clr-grey-10: hsl(210, 36%, 96%);
     --color-grey-11: rgb(239, 239, 239);
+
     /* variales with effects, shadows and opacacity */
 
     --transition: all 0.3s linear;
@@ -33,6 +37,7 @@
     --radius: 0.25rem;
 
     /* shadows variables */
+
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --shadow-effect-1: 0 10px 6px -6px #777;
@@ -46,6 +51,7 @@
     --text-box-border-grey-1: solid 2px rgba(255, 255, 255, 0.5);
 
     /* opacacity black  variables */
+
     --text-box-bg-color: rgba(0, 0, 0, 0.4);
 
     /* widths and heights variables */
@@ -53,11 +59,13 @@
     --fixed-width: 620px;
     --heights: 70vh;
     --widths: 100%;
+
     /* border-radious variables */
 
     --border-radious-t1: 15px 50px 30px 5px;
 
     /* font-size variables */
+
     --font-2xs: 0.625rem;
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
@@ -84,7 +92,7 @@
     margin: 0;
     scroll-behavior: smooth;
     font-family: var(--antonio-font);
-    font-size: 18px;
+    font-size: 16px;
 }
 
 html,
@@ -251,6 +259,19 @@ a {
 .bold-tex {
     font-weight: 700;
 }
+/* font-types */
+
+.roboto-text {
+    font-family: var(--roboto-font);
+}
+
+.lato-text {
+    font-family: var(--lato-font);
+}
+
+.poppins-text {
+    font-family: var(--poppins-font);
+}
 
 /* font-size-classes */
 
@@ -348,19 +369,6 @@ a {
     display: block;
 }
 
-.golden-global-button {
-    color: var(--color-white);
-    text-align: center;
-    font-size: 1rem;
-    width: 200px;
-    height: 60px;
-    border-radius: 12px;
-    background-color: var(--color-golden);
-    border: none;
-    cursor: pointer;
-    padding-top: 15px;
-}
-
 /* styles for Contact component*/
 
 .contactPhone {
@@ -372,41 +380,7 @@ a {
     padding-left: 10px;
 }
 
-.contactButtonItem {
-    text-transform: uppercase;
-    width: 180px;
-    height: 30px;
-    text-align: center;
-    border: var(--color-white) solid;
-    color: var(--color-golden);
-    border-radius: 0.5rem;
-    font-weight: 400;
-}
-
-/* Container for groups of buttons for desktop */
-
-.btns-group {
-    display: flex;
-    align-items: center;
-}
-
 /* Styles for titles, subtitles and paragraph */
-
-@media only screen and (max-width: 768px) {
-    .color-title,
-    .black-title,
-    .white-title {
-        font-size: var(--font-xl);
-    }
-    .color-subtitle,
-    .black-subtitle,
-    .white-subtitle {
-        font-size: var(--font-lg);
-    }
-    .btns-group {
-        flex-direction: column;
-    }
-}
 
 .solid-black-line {
     border-top: 5px solid var(--color-black);
@@ -432,9 +406,12 @@ a {
     @apply text-base md:text-lg;
 }
 .cstm-text-size {
-    @apply text-xs md:text-base;
+    @apply text-sm md:text-base;
 }
 
+.cstm-text-xs-size {
+    @apply md:text-sm text-xs;
+}
 .cstm-black-title {
     @apply tracking-wider py-2 cstm-title-size text-crlblack;
 }
@@ -445,6 +422,10 @@ a {
 
 .cstm-black-text {
     @apply tracking-wider py-1 cstm-text-size text-crlblack;
+}
+
+.cstm-black-text-xs {
+    @apply tracking-wider py-1 cstm-text-xs-size text-crlblack;
 }
 
 .cstm-white-title {
@@ -459,8 +440,45 @@ a {
     @apply tracking-wider py-1 cstm-text-size text-clrwhite;
 }
 
+.cstm-white-text-xs {
+    @apply tracking-wider py-1 cstm-text-xs-size text-clrwhite;
+}
+
+.cstm-golden-title {
+    @apply tracking-wider py-1 cstm-title-size text-clrgolden;
+}
+
+.cstm-golden-subtitle {
+    @apply tracking-wider py-1 cstm-subtitle-size text-clrgolden;
+}
+
+.cstm-golden-text {
+    @apply tracking-wider py-1 cstm-text-size text-clrgolden;
+}
+
+.cstm-golden-text-xs {
+    @apply tracking-wider py-1 cstm-text-xs-size text-clrgolden;
+}
+
+.cstm-dark-grey-title {
+    @apply tracking-wider py-1 cstm-title-size text-clrgray-dark;
+}
+
+.cstmd-dark-grey-subtitle {
+    @apply tracking-wider py-1 cstm-subtitle-size text-clrgray-dark;
+}
+
+.cstm-dark-grey-text {
+    @apply tracking-wider py-1 cstm-text-size text-clrgray-dark;
+}
+
+.cstm-par-text {
+    font-family: var(--roboto-font);
+    font-size: 1.5 rem;
+}
+
 .cstm-menu-text {
-    @apply tracking-wider text-xs md:text-lg text-center   md:p-1 border-spacing-2;
+    @apply tracking-wider text-sm md:text-xl text-center   md:p-1 border-spacing-2;
 }
 
 .cstm-white-menu-text {
@@ -539,7 +557,7 @@ a {
 }
 
 .cstm-input {
-    @apply text-sm text-clrblack font-light bg-transparent border-b py-2 pl-2 focus:outline-none focus:rounded-md focus:ring-1 ring-[#B59410];
+    @apply text-sm font-light bg-transparent  border  shadow-xl py-2 pl-2 focus:outline-none focus:rounded-md focus:ring-1 ring-[#B59410];
 }
 
 .cstm-error-message {
@@ -548,15 +566,6 @@ a {
 
 .cstm-asterisk {
     @apply cstm-text-size text-[#EA4C41] pl-2;
-}
-/* Transitions and Animations Classes  Section*/
-
-.cstm-transition {
-    @apply transition-all duration-300 ease-in-out;
-}
-
-.cstm-transition-all-200 {
-    @apply transition-all duration-200 ease-in-out;
 }
 
 /* Borders Classes Section*/
@@ -569,12 +578,6 @@ a {
 }
 
 /*General Forms Classes */
-
-.cstm-contact-form {
-    @apply rounded-lg flex flex-col px-8 py-8 bg-white m-1;
-}
-
-/* borders and buttons*/
 
 .cstm-border-2-golden {
     @apply border-2 border-solid border-clrgolden;
@@ -629,70 +632,39 @@ a {
     @apply p-2.5 fa-icon-text;
 }
 
-/* Animations */
-
-.animation-traslateX {
-    animation: moveInBottom 0.5s ease-out;
-    animation-fill-mode: backwards;
+.rounded-btn,
+.circular-btn {
+    @apply flex  justify-center items-center text-center p-2  m-4;
+}
+.rounded-btn {
+    @apply rounded-full py-4 px-5;
+}
+.circular-btn {
+    @apply rounded-full h-14 w-14;
 }
 
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translatex(-30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translatex(0px);
-    }
-}
-
-.animation-translateY {
-    animation: moveInBottom 0.5s ease-out;
-    animation-fill-mode: backwards;
-}
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
+@media screen and (max-width: 768px) {
+    .rounded-btn,
+    .circular-btn {
+        padding: 0.8rem;
+        margin: 0.8rem;
     }
 }
 
-/* buttons */
-.btn {
-    @apply rounded-2xl w-[200px] h-[60px] mt-[15px] mr-[15px] flex text-center items-center justify-center;
+.rounded-btn:hover {
+    @apply shadow-xl transform translate-y-[-0.25rem];
 }
 
-.btn:link,
-.btn:visited {
-    @apply uppercase inline-block rounded-lg ease-in duration-200;
-}
-
-.btn:hover {
-    @apply translate-y-[-3px] shadow-lg shadow-gray-500;
-}
-
-.btn:active {
-    @apply translate-y-[-1px] shadow-lg  shadow-gray-500;
+.circular-btn:hover {
+    @apply shadow-xl;
 }
 
 .btn-golden {
     @apply bg-clrgolden;
 }
 
-.btn-golden::after {
-    @apply bg-clrgolden;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+.btns-group {
+    @apply flex;
 }
 
 .btn-animated {
@@ -712,8 +684,61 @@ a {
     }
 }
 
-/* container for groups of buttons for desktop and mobile */
+.btn-animated {
+    animation: moveInBottom 0.5s ease-out;
+    animation-fill-mode: backwards;
+}
 
-.btns-group {
-    @apply flex md:flex-row flex-col items-center;
+.bg-cover {
+    background-size: cover;
+}
+.bg-center {
+    background-position: center;
+}
+
+/* forms */
+
+.cstm-form-container {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[45%] bg-white bg-opacity-90 rounded p-8 m-4 md:max-w-lg  w-full z-10;
+}
+
+/* Image background and filter */
+
+.ctsm-img-bg-filter-1 {
+    background-image: url('/assets/images/place/trenchers_beers_bar_bw_4.webp');
+    filter: grayscale(30%);
+}
+
+.ctsm-img-bg-filter-2 {
+    background-image: url('/assets/images/place/trenchers_beers_deco_co_1.webp');
+    filter: grayscale(30%);
+}
+.ctsm-img-bg-filter-3 {
+    background-image: url('/assets/images/place/trenchers_people_1.webp');
+}
+.ctsm-img-bg-filter-4 {
+    background-image: url('/assets/images/place/trenchers_people_1.webp');
+}
+
+.ctsm-img-bg-filter-5 {
+    background-image: url('/assets/images/place/trenchers_front_area_co_6.webp');
+}
+
+.animate {
+    /* Example: Fade-in effect */
+    animation: fadeIn 3s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.par_height_line {
+    height: 100px; /* Set the height of the element */
+    line-height: 1.5; /* Set the line height */
 }

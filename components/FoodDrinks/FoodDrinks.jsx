@@ -26,7 +26,6 @@ const FoodDrinks = () => {
     const formatText = joinSentencesWithPeriodAndBreak(capitalizeFirstWords);
     return (
         <section className="md:mt-2 mt-8">
-            
             <ImageTextCard
                 title={capitalizeWords(content.title)}
                 titleText={content.titleText}

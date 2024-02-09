@@ -10,7 +10,7 @@ const ButtonsAnimatedGroup = ({ btnsList }) => {
                     buttonUrl={item.url}
                     urlText={item.title}
                     target={item.target}
-                    btn="btn"
+                    btn="rounded-btn"
                     btnBg="btn-golden"
                     btnAnimated="btn-animated"
                     btnText="cstm-black-text"

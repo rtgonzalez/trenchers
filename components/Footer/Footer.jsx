@@ -24,66 +24,57 @@ const Footer = () => {
     const location = contentObj.location;
     const openDaysHours = contentObj.openingsDaysHours;
     const socialNetwork = contentObj.socialNetwork;
+    const contactForm = contentObj.contactForm;
     addressArray.push(`${location.streetAddress}, ${location.addressLocality}`);
     addressArray.push(`${location.addressRegion}, ${location.postalCode}`);
     return (
-        <footer className="mx-auto bg-clrblack opacity-80">
-            <div className="flex md:flex-row flex-col justify-between items-center pb-4">
+        <footer className="mx-auto bg-clrblack opacity-90">
+            <div className="flex md:flex-row flex-col  items-center pb-4">
                 {/* Visit Us Section */}
-                <div className="flex flex-col justify-center items-center md:ml-20 mt-4">
+                <div className="flex flex-col md:w-[35%] w-full  md:ml-10 mt-2">
                     <div>
-                        <FooterContactForm />
-                    </div>
-                    <div>
-                        <h1 className="cstm-title-height-line text-clrgolden text-center hover:text-brightColor transition-all cursor-pointer">
-                            {capitalizeWords(location.title)}
-                        </h1>
-                    </div>
-                    <div>
-                        <p className="cstm-regular-text-height-line text-clrwhite text-center hover:text-brightColor transition-all cursor-pointer">
-                            {joinSentencesWithCommaAndBreak(addressArray)}
-                        </p>
+                        <FooterContactForm content={contactForm} />
                     </div>
                 </div>
 
                 {/* Working Hours Section */}
 
-                <div className="flex flex-col justify-center items-center md:ml-20 mt-4 mb-4">
+                <div className="flex flex-col md:w-[35%] w-full justify-center items-center gap-1 md:ml-20 mt-4 mb-4">
                     <div>
-                        <h1 className="cstm-title-height-line text-clrgolden text-center hover:text-brightColor transition-all cursor-pointer mb-4">
+                        <h1 className="cstm-golden-title text-center hover:text-brightColor transition-all cursor-pointer mb-4">
                             {capitalizeWords(openDaysHours.title)}
                         </h1>
                     </div>
                     <div>
                         {openDaysHours.daysHours.map((openDayHour, item) => (
-                            <div className="flex flex-col" key={item}>
-                                <div className="flex items-start justify-start py-2">
-                                    <div className=" pr-8">
-                                        <p className="cstm-regular-text-height-line text-clrwhite text-left hover:text-brightColor transition-all cursor-pointer">
-                                            {`${openDayHour.dayOfWeek}`}
-                                        </p>
-                                    </div>
-                                    <div className="flex items-end justify-end">
-                                        <div className=" text-clrwhite text-right">
-                                            {`${openDayHour.opens} - ${openDayHour.closes}`}
-                                        </div>
+                            <div
+                                className="flex flex-col justify-center items-center gap-1 cursor-pointer"
+                                key={item}
+                            >
+                                <div className="flex py-2">
+                                    <div className="pr-8">
+                                        <span className="cstm-white-text pr-2">
+                                            {`${openDayHour.dayOfWeek}`}:
+                                        </span>
+                                        <span className="cstm-white-text text-right">{`${openDayHour.opens}`}</span>
+                                        <spa className="cstm-white-text">{`-`}</spa>
+                                        <span className="cstm-white-text">{`${openDayHour.closes}`}</span>
                                     </div>
                                 </div>
-                                <div className="flex-1 border-t border-gray-300"></div>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Social Media Section */}
-                <div className="flex flex-col justify-between items-center space-x-1 md:mr-20 mb-4">
+                <div className="md:w-[35%] w-full flex flex-col justify-between items-center gap-1 md:mr-20 mb-4">
                     <div>
-                        <h1 className="cstm-title-height-line text-clrgolden hover:text-brightColor transition-all cursor-pointer">
+                        <h1 className="cstm-golden-title text-center hover:text-brightColor transition-all cursor-pointer">
                             {capitalizeWords(socialNetwork.title)}
                         </h1>
                     </div>
                     <div>
-                        <ul className="flex space-x-1 justify-center items-center">
+                        <ul className="flex gap-1 justify-center items-center">
                             {socialNetwork.socialNetworksList.map(
                                 (socialNetwork, item) => (
                                     <li className="py-2" key={item}>
@@ -102,25 +93,37 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h1 className="cstm-title-height-line text-clrgolden hover:text-brightColor transition-all cursor-pointer pb-2">
+                        <h1 className="cstm-golden-title hover:text-brightColor transition-all cursor-pointer pb-2">
                             {capitalizeWords(location.contact.title)}
                         </h1>
                     </div>
-                    <div className=" flex justify-center items-center space-x-2">
+                    <div className=" flex justify-center items-center">
                         <div>
                             <FontAwesomeIcon
                                 icon={['fas', 'phone']}
                                 className="fas-phone-icon"
                             />
                         </div>
-                        <p className="cstm-white-menu-text hover:text-brightColor transition-all cursor-pointer">
+                        <p className="cstm-white-subtitle hover:text-brightColor transition-all cursor-pointer">
                             {location.contact.phone}
                         </p>
                     </div>
                     <div>
-                        <p className="cstm-white-menu-text hover:text-brightColor transition-all cursor-pointer">
+                        <p className="cstm-white-subtitle hover:text-brightColor transition-all cursor-pointer">
                             {capitalizeWords(location.contact.email)}
                         </p>
+                    </div>
+                    <div className="flex flex-col items-center justify-center mt-2">
+                        <div>
+                            <h1 className="cstm-title-height-line text-clrgolden text-center hover:text-brightColor transition-all cursor-pointer">
+                                {capitalizeWords(location.title)}
+                            </h1>
+                        </div>
+                        <div>
+                            <p className="cstm-white-text text-center hover:text-brightColor transition-all cursor-pointer">
+                                {joinSentencesWithCommaAndBreak(addressArray)}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

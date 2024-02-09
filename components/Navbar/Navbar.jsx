@@ -61,7 +61,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="relative">
-                        <div className="flex justify-center items-center relative rounded overflow-hidden group bg-clrgolden  hover:bg-gradient-to-r hover:from-white hover:to-clrgolden cstm-black-text hover:ring-2 hover:ring-offset-2 hover:ring-clrgolden transition-all ease-out duration-300 mb-4 mr-4 border-2 border-clrgolden">
+                        <div className="rounded bg-clrgolden ml-4 p-1">
                             <button onClick={toggleReserv}>
                                 <div className="flex items-center justify-center">
                                     <div>
@@ -76,12 +76,16 @@ const Navbar = () => {
                             </button>
                         </div>
                         {isOpenResv && (
-                            <div className="absolute z-10 left-2 top-13 md:mt-2 mt-1 bg-clrwhite text-black font-semibold rounded">
+                            <div
+                                className="absolute z-10  left-4 top-13 md:mt-2 mt-1 bg-clrwhite cstm-black-text font-semibold rounded"
+                                onMouseEnter={() => setIsOpenResv(true)}
+                                onMouseLeave={() => setIsOpenResv(false)}
+                            >
                                 <ul className="flex flex-col">
                                     {contact.buttons[1].submenu.map(
                                         (item, index) => (
                                             <li
-                                                className="h-8 w-40 md:pl-4 pl-10 hover:text-white hover:bg-black"
+                                                className="h-8 md:w-40 w-36 pl-4 cstm-black-text hover:text-white hover:bg-black"
                                                 key={index}
                                             >
                                                 <Link
@@ -89,10 +93,10 @@ const Navbar = () => {
                                                     legacyBehavior
                                                 >
                                                     <a target={item.target}>
-                                                        <div className="flex items-center md:text-lg text-xs font-semibold hover:text-white">
-                                                            <div className="pl-2">
+                                                        <div className="flex items-center font-semibold hover:text-white md:pl-3 pl-1">
+                                                            <p className="md:text-lg text-xs text-center">
                                                                 {item.title}
-                                                            </div>
+                                                            </p>
                                                         </div>
                                                     </a>
                                                 </Link>

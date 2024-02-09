@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { capitalizeWords, capitalizeSentences } from 'utils/jsfunctions';
+import {
+    capitalizeWords,
+    capitalizeSentences,
+    joinSentencesWithPeriodAndBreak
+} from 'utils/jsfunctions';
 import Error from 'pages/_error';
 import useSWR from 'swr';
 
@@ -26,6 +30,8 @@ const Sports = () => {
     const sportsList = content.sportsImagesList;
     const urlbg = content.urlbg;
     const altbg = content.altbg;
+    const capitalizeFirstWords = capitalizeSentences(text);
+    const formatText = joinSentencesWithPeriodAndBreak(capitalizeFirstWords);
     return (
         <section className="w-full md:h-[30rem] h-[43rem] my-7 relative">
             <div className="w-full h-full absolute top-0 left-0">
@@ -40,7 +46,7 @@ const Sports = () => {
                     {subtitle}
                 </h2>
                 <p className="tracking-wider leading-8 md:text-lg text-base text-center font-bold text-white pb-1 pt-6 px-10">
-                    {capitalizeSentences(text)}
+                    {formatText}
                 </p>
                 <div>
                     <ul className="flex justify-between items-center relative space-x-8 space-y-10">

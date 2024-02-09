@@ -1,0 +1,65 @@
+.calen-header {
+    display: flex;
+    justify-content: center;
+}
+
+.calen-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns */
+    gap: 0.25rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.calen-cell-body {
+    height: 11rem;
+    width: 11rem;
+    background-color: var(--color-light-grey);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calen-cell-empty {
+    height: 11rem;
+    width: 11rem;
+    background-color: var(--color-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details {
+    position: absolute;
+    top: 0;
+    width: calc(200% + 0.25rem); /* 4 cell widths plus gap */
+    height: calc(200% + 0.25rem); /* 4 cell widths plus gap */
+    background-color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+}
+.calen-day {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.detailsRight {
+    left: calc(100% + 0.25rem);
+}
+
+.detailsLeft {
+    right: calc(100% + 0.25rem);
+}
+
+@media (max-width: 768px) {
+    .calen-cell-body {
+        height: 3rem;
+        width: 3rem;
+    }
+}

@@ -50,7 +50,9 @@ const RightLeftTextBgImage = ({
                     ))}
                 </ul>
                 <div className="pb-6">
-                    <ButtonsAnimatedGroup btnsList={leftBtnsList} />
+                    {leftBtnsList && (
+                        <ButtonsAnimatedGroup btnsList={leftBtnsList} />
+                    )}
                 </div>
             </div>
             <div className="w-full h-full flex flex-col justify-center items-center animation-traslateX relative z-[10]">
@@ -83,7 +85,9 @@ const RightLeftTextBgImage = ({
                     ))}
                 </ul>
                 <div className="pb-6">
-                    <ButtonsAnimatedGroup btnsList={rightBtnsList} />
+                    {rightBtnsList && (
+                        <ButtonsAnimatedGroup btnsList={rightBtnsList} />
+                    )}
                 </div>
             </div>
         </div>

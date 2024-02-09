@@ -1,8 +1,44 @@
 {
-    "title": "Our Story",
-    "text": "Trenchers, which means a wooden board or platter on which food is carved or served, is that place where you can come and enjoy a wide variety of draft beer & cider while watching your favorite game. You name it: Seahawks, Kraken, Sounders, Mariners, College Football, NFL, MLS, FIFA. You can find it in any of our +17 TVs.  We have 30 beers on tap, including all your old favorites and always something new. We rotate them frequently so there is always an excuse to come back. Come watch the game, hang with family & friends and meet new ones! Choose indoor and outdoor seating with live music, trivia, comedy nights and a friendly staff! Trenchers has been here for every celebration or heart break for more than 10 years, 7 days a week.",
-    "img": {
-        "url": "/assets/images/place/trenchers_front_area_co_5.webp",
-        "alt": "Our Story, Our Place"
-    }
+    "placeHist": {
+        "title": "Trenchers's History",
+        "text": "Trenchers, which means a wooden board or platter on which food is carved or served, is that place where you can come and enjoy a wide variety of draft beer & cider while watching your favorite game. You name it: Seahawks, Kraken, Sounders, Mariners, College Football, NFL, MLS, FIFA. You can find it in any of our +17 TVs.  We have 30 beers on tap, including all your old favorites and always something new. We rotate them frequently so there is always an excuse to come back. Come watch the game, hang with family & friends and meet new ones! Choose indoor and outdoor seating with live music, trivia, comedy nights and a friendly staff! Trenchers has been here for every celebration or heart break for more than 10 years, 7 days a week.",
+        "img": {
+            "url": "/assets/images/place/trenchers_bar_area_co_2.webp",
+            "alt": "Our Story, Our Place"
+        }
+    },
+    "businessFriendsStory": {
+        "title": "Discover Our History",
+        "text": "Our history is about business, friendship, and all ours dreams comes true. It all started with a conversation between my friends Ricky, Jona and I, Adri, at a local sports bar. We were chatting about how much fun it would be to actually own a sports bar and make it our own. We had never really talked seriously about owning a business before, but this felt different. We were both passionate about sports, and we even discussed what the atmosphere of the bar should be, and thought it could be an amazing experience if we could have our own.After several intense weeks, we finally signed the documents and became the proud owners of our very own sports bar.",
+        "img": {
+            "url": "/assets/images/place/trenchers_front_area_co_5.webp",
+            "alt": "Our Trenchers Bar's Dream comes true"
+        }
+    },
+    "owners": [
+        {
+            "title": "Adriana Botty",
+            "description": "Owner & Manager",
+            "img": {
+                "url": "/assets/images/people/trenchers_adri_owner.webp",
+                "alt": "Adriana's picture"
+            }
+        },
+        {
+            "title": "Jonathan Jaime",
+            "description": "Owner & Manager",
+            "img": {
+                "url": "/assets/images/people/trenchers_jona_owner.webp",
+                "alt": "Jona's picture"
+            }
+        },
+        {
+            "title": "Ricardo Costa",
+            "description": "Owner & Manager",
+            "img": {
+                "url": "/assets/images/people/trenchers_ricky_owner.webp",
+                "alt": "Ricky's picture"
+            }
+        }
+    ]
 }

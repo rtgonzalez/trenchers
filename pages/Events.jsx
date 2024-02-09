@@ -1,7 +1,9 @@
-import React from 'react';
+import { EventDetailsList, FixedBackground } from 'components/index';
 
-const Events = () => {
-    return <div></div>;
-};
-
-export default Events;
+export default function CreateEventPage() {
+    return (
+        <FixedBackground dynamicClasses="ctsm-img-bg-filter-1">
+            <EventDetailsList />
+        </FixedBackground>
+    );
+}

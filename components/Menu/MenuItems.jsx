@@ -34,23 +34,24 @@ const MenuItems = ({ items }) => {
                         </Link>
                     </div>
                     {isOpen && (
-                        <div className="absolute z-10 left-2 top-8 md:mt-2 mt-1 bg-clrwhite text-black font-semibold rounded">
-                            <ul className="flex flex-col">
+                        <div
+                            className="absolute z-10 left-2 top-8 mt-3 bg-clrwhite text-black font-semibold rounded"
+                            onMouseEnter={() => setIsOpen(true)}
+                            onMouseLeave={() => setIsOpen(false)}
+                        >
+                            <ul className="flex flex-col ">
                                 {items.submenu.map((item, index) => (
                                     <li
-                                        className="h-8 w-40 md:pl-4 pl-10 hover:text-white hover:bg-black"
+                                        className=" flex items-center pt-2 h-10 w-40 md:pl-4 pl-10  hover:text-white hover:bg-black"
                                         key={index}
                                     >
                                         <Link href={item.url} legacyBehavior>
-                                            <a
-                                                target={item.target}
-                                                className="md:text-lg text-xs font-semibold"
-                                            >
+                                            <a target={item.target}>
                                                 <div className="flex items-center">
-                                                    <div>
+                                                    <div className="md:text-lg text-sm">
                                                         <MdDeliveryDining />
                                                     </div>
-                                                    <div className="pl-2">
+                                                    <div className="md:text-lg text-sm pl-2 pb-2">
                                                         {item.title}
                                                     </div>
                                                 </div>

@@ -27,8 +27,8 @@ const Menu = () => {
     const menuItems = menuContent.menuItems;
 
     return (
-        <div className="mt-2 mr-10 ml-12 relative">
-            <ul className="flex flex-col md:flex-row space-x-2">
+        <div className="mt-6 ml-20 relative">
+            <ul className="flex flex-col gap-1 md:flex-row space-x-2">
                 {menuItems.map((menu, index) => {
                     return <MenuItems items={menu} key={index} />;
                 })}

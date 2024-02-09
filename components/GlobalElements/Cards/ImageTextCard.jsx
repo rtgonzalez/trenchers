@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ButtonsAnimatedGroup } from 'components/index';
 import { IoBeerSharp } from 'react-icons/io5';
+import { useInView } from 'react-intersection-observer';
 
 const ImageTextCard = ({
     title,
@@ -12,6 +13,9 @@ const ImageTextCard = ({
     imageSide,
     isJson
 }) => {
+    const { ref, inView } = useInView({
+        threshold: 0.1
+    });
     const dynamicClasses = imageSide
         ? 'image-text-card-wrapper-right'
         : 'image-text-card-wrapper-left';
@@ -22,8 +26,12 @@ const ImageTextCard = ({
                 {beers.map((beer, index) => (
                     <li key={index}>
                         <div className="flex justify-start items-center">
-                            <IoBeerSharp className="text-clrgolden" />
-                            <div className="pl-2 leading-10">{`${beer.name}`}</div>
+                            <div className="pb-2">
+                                <IoBeerSharp className="text-clrgolden" />
+                            </div>
+                            <div>
+                                <p className="pl-2 pb-2 leading-1 cstm-par-text">{`${beer.name}`}</p>
+                            </div>
                             <br />
                         </div>
                     </li>
@@ -33,7 +41,10 @@ const ImageTextCard = ({
     };
     return (
         <div
-            className={`${dynamicClasses} mb-7 justify-around items-center w-[98%]`}
+            ref={ref}
+            className={`${dynamicClasses} mb-7 justify-around items-center w-[98%] ${
+                inView ? 'animate' : ''
+            }`}
         >
             <div className="relative overflow-hidden md:w-[45%] w-full h-[600px] shadow-lg animation-traslateX">
                 <Image
@@ -44,20 +55,32 @@ const ImageTextCard = ({
                     loading="lazy"
                 />
             </div>
-            <div className="flex flex-col justify-center pl-7 space-y-3 md:w-[45%] w-[70%] md:pb-2 pb-4">
+            <div className="flex flex-col justify-center pl-7 gap-1 md:w-[45%] w-[70%] md:pb-2 pb-4">
                 <div>
-                    <h1 className="tracking-wider leading-5 md:text-5xl text-3xl font-bold  md:text-left text-center md:py-2 py-4">
+                    <h1
+                        className={`tracking-wider leading-5 md:text-5xl text-3xl font-bold  text-center pt-2 pb-6  ${
+                            isJson ? 'md:text-left' : 'md:text-center'
+                        }`}
+                    >
                         {title}
                     </h1>
                 </div>
                 <div className="flex md:justify-start justify-center">
-                    <p className="cstm-reg-para-height-line">
-                        {isJson ? <BeerList beers={text} /> : text}
-                    </p>
+                    {isJson ? (
+                        <BeerList beers={text} />
+                    ) : (
+                        <p className="cstm-black-subtitle text-center leading-8 ">
+                            {text}
+                        </p>
+                    )}
                 </div>
-                <div className="pt-4">
-                    <ButtonsAnimatedGroup btnsList={btnsList} />
-                </div>
+                {btnsList && (
+                    <div className="flex justify-center items-center">
+                        {btnsList && (
+                            <ButtonsAnimatedGroup btnsList={btnsList} />
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );

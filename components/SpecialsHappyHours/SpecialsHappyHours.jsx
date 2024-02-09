@@ -32,13 +32,13 @@ const SpecialsHappyHours = () => {
                     leftTitle={spclsTitle}
                     leftSubtitle={spclsSubtitle}
                     leftTextlist={spclsTextlist}
-                    leftBtnsList={spclsBtnsList}
+                    /*leftBtnsList={spclsBtnsList} */
                     leftImageUrl={spclsImageUrl}
                     leftImageAlt={spclsImageAlt}
                     rightTitle={happyHsTitle}
                     rightSubtitle={happyHsSubtitle}
                     rightTextlist={happyHsTextlist}
-                    rightBtnsList={happyHsBtnsList}
+                    /* rightBtnsList={happyHsBtnsList} */
                     rightImageUrl={happyHsImageUrl}
                     rightImageAlt={happyHImageAlt}
                 />

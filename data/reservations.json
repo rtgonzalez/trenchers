@@ -5,15 +5,16 @@
         "text1": "For Private Events or big groups go to the ",
         "link": {
             "title": "Private Events",
-            "url": "/PrivateEvents",
+            "url": "/privateEvents",
             "target": "_self"
         },
         "text2": "section."
     },
-    "text2": "We look forward to hearing from you.!",
+    "text2": "We look forward to hearing from you!",
+    "smallGroupsText": "Please, chick on the button below to reservate small group (19 or less people)",
     "buttons": [
         {
-            "title": "Book Here",
+            "title": "Small Groups Book Here",
             "url": "https://tables.toasttab.com/restaurants/21565bf6-8bf3-4d82-a732-1646e957b9a4/findTime",
             "target": "_blank"
         }
@@ -25,11 +26,10 @@
         "alt": "Reservations Section"
     },
     "contactForm": {
-        "title": "Send us your comments or questions!",
-        "successMsgText": "Sent!",
-        "errorMsgText": "Something Wrong",
+        "title": "Send Us Your Comments or Questions!",
+        "successMsgText": "Your message has been Sent!",
+        "errorMsgText": "Something was Wrong",
         "btnTextSend": "Send a Message",
-        "btnTextSent": "Sending Message",
         "btnCleanInputsText": "Clear Data",
         "name": {
             "text": "Name",
