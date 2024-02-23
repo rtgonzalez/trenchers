@@ -2,7 +2,7 @@
     "menuItems": [
         {
             "title": "About us",
-            "url": "/aboutUs",
+            "url": "/AboutUs",
             "target": "_self"
         },
         {
